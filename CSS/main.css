@@ -5,9 +5,21 @@ html {
     width: 100%;
 }
 
+.mainContainer {
+
+    height: 100%;
+    width: 100%;
+    display: grid;
+}
+
 .header {
 
     width: 100%;
+}
+
+.buttonContainer {
+
+
 }
 
 .navigationBar {
