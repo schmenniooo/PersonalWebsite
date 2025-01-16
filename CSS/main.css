@@ -10,16 +10,23 @@ html {
     height: 100%;
     width: 100%;
     display: grid;
+    justify-items: center;
+    align-content: space-evenly;
 }
 
 .header {
 
     width: 100%;
+    display: flex;
+    justify-items: center;
+    align-content: space-evenly;
 }
 
 .buttonContainer {
 
-
+    display: flex;
+    justify-items: center;
+    align-content: space-evenly;
 }
 
 .button {
