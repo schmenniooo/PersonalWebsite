@@ -32,17 +32,18 @@ html, body{
 .header {
 
     width: 100%;
+    padding: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
 }
 .header h1 {
 
     margin: 0;
-    padding: 0;
+    padding: 0 50px;
     font-size: 24px;
-    flex: 1;
+    flex: 0 1 auto;
+    white-space: nowrap;
     text-align: left;
 }
 .navigationBar {
@@ -50,6 +51,7 @@ html, body{
     width: 100%;
     display: flex;
     justify-content: space-between;
+    gap: 50px;
     align-items: center;
     text-align: center;
     padding: 10px;
