@@ -1,10 +1,15 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
 html, body{
+
+    font-family: "Noto Sans", serif;
 
     height: 100%;
     width: 100%;
     margin: 0;
     padding: 0;
+
     overflow: hidden;
 }
 
@@ -19,11 +24,13 @@ html, body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background: linear-gradient(60deg, blue, dodgerblue);
 }
 
 .headerContainer {
 
     width: 100%;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -32,6 +39,7 @@ html, body{
 .header {
 
     width: 100%;
+
     padding: 10px;
     display: flex;
     justify-content: space-between;
@@ -40,7 +48,8 @@ html, body{
 .header h1 {
 
     margin: 0;
-    padding: 0 50px;
+    padding: 0 35px;
+
     font-size: 24px;
     flex: 0 1 auto;
     white-space: nowrap;
@@ -49,6 +58,7 @@ html, body{
 .navigationBar {
 
     width: 100%;
+
     display: flex;
     justify-content: space-between;
     gap: 50px;
@@ -100,7 +110,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: transparent;
+    background: inherit;
     transition: transform 0.2s;
 }
 .button:hover {
