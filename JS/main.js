@@ -1,18 +1,20 @@
 
-function openInstagramLink() {
-    window.open("https://www.instagram.com/schmenniooo/", "_blank");
-}
+let target = "";
+const links = ["https://www.instagram.com/schmenniooo/", "https://github.com/schmenniooo", "https://www.linkedin.com/in/ennio-schmidt-0304472b6/", "mailto:ennio.nick@gmail.com"];
 
-function openGithubLink() {
+document.querySelector('.buttonContainer').addEventListener('click', function (event) {
 
-    window.open("https://github.com/schmenniooo", "_blank");
-}
+    if (event.target.tagName === 'Button') {
 
-function openLinkedInLink() {
+        const action = event.target.getAttribute('data-action');
 
-    window.open("https://www.linkedin.com/in/ennio-schmidt-0304472b6/", "_blank");
-}
-
-function openEmailLink() {
-    window.open("mailto:ennio.nick@gmail.com", "_blank");
-}
+        for (let i = 1; i < links.length; i++) {
+            if (action === links[i]) {
+                target = action
+            } else {
+                console.error("Error in links.")
+            }
+        }
+        window.open(target, '_blank');
+    }
+});
