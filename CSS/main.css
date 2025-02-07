@@ -70,7 +70,47 @@ html, body{
 
     text-decoration: none;
     color: inherit;
+    position: relative;
 }
+.navigationBar a::after {
+
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    background-color: #0425a8;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+.navigationBar a:hover::after {
+
+    transform: scaleX(1.2);
+}
+
+/*.nav1 a {
+
+    text-decoration: none;
+    color: white;
+    position: relative;
+}
+
+nav a::after {
+
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    background-color: dodgerblue;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+nav a:hover::after {
+    transform: scaleX(1.3);
+}*/
 
 .mainViewContainer {
 
@@ -83,6 +123,11 @@ html, body{
     align-items: center;
     flex-direction: column;
     text-align: center;
+}
+.textContainer {
+
+    width: inherit;
+    font-size: large;
 }
 
 .footerContainer {
