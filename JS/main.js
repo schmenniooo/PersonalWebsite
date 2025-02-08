@@ -1,7 +1,9 @@
 
+
 document.addEventListener('DOMContentLoaded', function () {
     const buttonContainer = document.querySelector('.buttonContainer');
     if (buttonContainer) {
+        // If button clicked link is open by its data-action
         buttonContainer.addEventListener('click', function (event) {
             const button = event.target.closest('button');
             if (button) {
