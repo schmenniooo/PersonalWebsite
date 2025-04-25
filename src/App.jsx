@@ -1,10 +1,15 @@
 
+import Header from './Header.jsx'
+import MainContainer from './MainContainer.jsx'
+import Footer from './Footer.jsx'
+
 function App() {
 
     return (
         <div>
-            <h1>React App</h1>
-            <h2>Hello World</h2>
+            { Header()}
+            { MainContainer()}
+            { Footer()}
         </div>
     )
 }
