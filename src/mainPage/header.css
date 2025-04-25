@@ -1,7 +1,10 @@
 
 .headerContainer {
 
-
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px;
 }
 
 .navContainer {
@@ -9,7 +12,24 @@
 
 }
 
+.navigationItemContainer {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    gap: 30px;
+    list-style-type: none;
+}
+
 .navigationItem {
 
 
+}
+
+.linkItem {
+
+    color: black;
+    text-decoration: none;
 }
