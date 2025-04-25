@@ -26,6 +26,7 @@ function Footer() {
                         </a>
                     </li>
                 </ul>
+                <h3>&copy Ennio Schmidt. All rights reserved.</h3>
             </footer>
         </div>
     )
