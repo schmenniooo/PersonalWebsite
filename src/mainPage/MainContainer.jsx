@@ -2,17 +2,17 @@
 function MainContainer(){
 
     return (
-        <div>
-            <main>
-                <ul>
-                    <li>
-                        <p>text</p>
+        <div className="mainContainer">
+            <main className="mainContent">
+                <ul className="paragraphContainer">
+                    <li className="paragraphItem">
+                        <p className="paragraph">text</p>
                     </li>
-                    <li>
-                        <p>text</p>
+                    <li className="paragraphItem">
+                        <p className="paragraph">text</p>
                     </li>
-                    <li>
-                        <p>text</p>
+                    <li className="paragraphItem">
+                        <p className="paragraph">text</p>
                     </li>
                 </ul>
             </main>
