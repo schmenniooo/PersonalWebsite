@@ -1,6 +1,8 @@
 
 function Footer() {
 
+    const currentYear = new Date().getFullYear().toString();
+
     return (
         <div>
             <footer>
@@ -26,7 +28,7 @@ function Footer() {
                         </a>
                     </li>
                 </ul>
-                <h3>&copy; Ennio Schmidt. All rights reserved.</h3>
+                <h3>&copy; {currentYear} Ennio Schmidt. All rights reserved.</h3>
             </footer>
         </div>
     )
