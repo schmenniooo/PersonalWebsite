@@ -1,14 +1,14 @@
 
-import Header from '../mainPage/header/Header.jsx'
-import MainContainer from '../mainPage/mainContainer/MainContainer.jsx'
-import Footer from '../mainPage/footer/Footer.jsx'
+import Header from '../header/Header.jsx'
+import DefaultMainContainer from '../defaultMainContainer/defaultMainContainer.jsx'
+import Footer from '../footer/Footer.jsx'
 
 function App() {
 
     return (
         <div className="app-container">
             { Header()}
-            { MainContainer()}
+            { DefaultMainContainer()}
             { Footer()}
         </div>
     )

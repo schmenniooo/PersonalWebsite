@@ -1,5 +1,5 @@
 
-function MainContainer(){
+function DefaultMainContainer(){
 
     return (
         <div className="mainContainer">
@@ -20,4 +20,4 @@ function MainContainer(){
     )
 }
 
-export default MainContainer
+export default DefaultMainContainer

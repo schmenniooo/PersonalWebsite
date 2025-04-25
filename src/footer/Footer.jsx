@@ -1,8 +1,8 @@
 
-import instagramIcon from '../../assets/insta_icon.jpeg';
-import githubIcon from '../../assets/github_icon.jpeg';
-import linkedInIcon from '../../assets/linkedIn_icon.jpeg';
-import emailIcon from '../../assets/email_icon.jpeg';
+import instagramIcon from '../assets/insta_icon.jpeg';
+import githubIcon from '../assets/github_icon.jpeg';
+import linkedInIcon from '../assets/linkedIn_icon.jpeg';
+import emailIcon from '../assets/email_icon.jpeg';
 
 function Footer() {
     const currentYear = new Date().getFullYear().toString();
