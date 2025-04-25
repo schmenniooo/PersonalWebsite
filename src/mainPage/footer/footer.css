@@ -1,3 +1,4 @@
+
 .footerContainer {
     display: flex;
     flex-direction: column;
@@ -36,7 +37,6 @@ footer li:hover {
 footer img {
     width: 30px;
     height: 30px;
-    border-radius: 50%;
 }
 
 footer h3 {
