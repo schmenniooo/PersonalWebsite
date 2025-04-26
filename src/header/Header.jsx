@@ -1,20 +1,20 @@
 
 function Header(){
 
+    const navigationItems = [
+        ["Me", "/public"],
+        ["My projects", "/public"],
+        ["My career", "/public"],
+    ]
+
     return (
         <div className="headerContainer">
             <h1>Ennio Schmidt</h1>
             <nav className="navContainer">
                 <ul className="navigationItemContainer">
-                    <li className="navigationItem">
-                        <a href="/public" className="linkItem">Me</a>
-                    </li>
-                    <li className="navigationItem">
-                        <a href="/public" className="linkItem">My Projects</a>
-                    </li>
-                    <li className="navigationItem">
-                        <a href="/public" className="linkItem">My Career</a>
-                    </li>
+                    {navigationItems.map(([text, link]) => (
+                        <li className="navigationItem" key={text}><a className="linkItem" href={link}>{text}</a></li>
+                    ))}
                 </ul>
             </nav>
         </div>
