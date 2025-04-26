@@ -14,16 +14,24 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 50%;
+    width: 100%;
 }
 
 .paragraphContainer {
 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
     list-style-type: none;
+    gap: 40px;
 }
 
 .paragraphItem {
 
+    background-color: #1e3c72;
+    border-radius: 15px;
     width: 100%;
 }
 
