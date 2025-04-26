@@ -39,6 +39,17 @@ footer img {
     height: 30px;
 }
 
+.social-icon {
+    width: 30px;
+    height: 30px;
+    color: white;
+    transition: color 0.2s ease;
+}
+
+footer a:hover .social-icon {
+    color: #61dafb; /* React blue color for hover effect */
+}
+
 footer h3 {
     font-size: 0.9rem;
     font-weight: 400;

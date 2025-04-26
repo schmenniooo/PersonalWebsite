@@ -1,8 +1,5 @@
 
-import instagramIcon from '../assets/insta_icon.jpeg';
-import githubIcon from '../assets/github_icon.jpeg';
-import linkedInIcon from '../assets/linkedIn_icon.jpeg';
-import emailIcon from '../assets/email_icon.jpeg';
+import { FaInstagram, FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 
 function Footer() {
     const currentYear = new Date().getFullYear().toString();
@@ -12,23 +9,23 @@ function Footer() {
             <footer>
                 <ul>
                     <li>
-                        <a href="https://www.instagram.com/schmenniooo/" target="_blank">
-                            <img src={instagramIcon} alt="instagram"/>
+                        <a href="https://www.instagram.com/schmenniooo/" target="_blank" aria-label="Instagram">
+                            <FaInstagram className="social-icon" />
                         </a>
                     </li>
                     <li>
-                        <a href="https://github.com/schmenniooo" target="_blank">
-                            <img src={githubIcon} alt='github'/>
+                        <a href="https://github.com/schmenniooo" target="_blank" aria-label="GitHub">
+                            <FaGithub className="social-icon" />
                         </a>
                     </li>
                     <li>
-                        <a href="https://www.linkedin.com/in/ennio-schmidt-0304472b6/" target="_blank">
-                            <img src={linkedInIcon} alt='linkedin'/>
+                        <a href="https://www.linkedin.com/in/ennio-schmidt-0304472b6/" target="_blank" aria-label="LinkedIn">
+                            <FaLinkedin className="social-icon" />
                         </a>
                     </li>
                     <li>
-                        <a href="#">
-                            <img src={emailIcon} alt='email'/>
+                        <a href="#" aria-label="Email">
+                            <FaEnvelope className="social-icon" />
                         </a>
                     </li>
                 </ul>
