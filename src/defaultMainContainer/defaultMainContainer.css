@@ -1,11 +1,11 @@
 
 .mainContainer {
-
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
+    flex-grow: 1;
 }
 
 .mainContent {
