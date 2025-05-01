@@ -10,6 +10,13 @@
     margin-top: 50px;
 }
 
+.headerContainer h1 {
+
+    color: white;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
 .navContainer {
 
 
