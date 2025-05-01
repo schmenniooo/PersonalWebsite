@@ -39,7 +39,6 @@ function CareerContent() {
 
                 {loading && <div className="loading-spinner">Loading career information...</div>}
                 {error && <div className="error-message">{error}</div>}
-
                 {careerStages && (
                     <div className="careerItemContainer">
                         {Object.entries(careerStages).map(([key, stage]) => (
@@ -47,8 +46,8 @@ function CareerContent() {
                                 <div className="career-content">
                                     <span className="career-icon">{stageEmojis[key] || "👨‍💻"}</span>
                                     <div className="career-details">
-                                        <h2 className="career-stage-title">{stage.title || stage.Title}</h2>
-                                        <p className="career-date">{stage.date || stage.Date}</p>
+                                        <h2 className="career-stage-title">{stage.title}</h2>
+                                        <p className="career-date">{stage.date}</p>
                                         <p className="career-description">{stage.description}</p>
                                     </div>
                                 </div>
