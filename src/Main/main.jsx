@@ -5,6 +5,7 @@ import App from './App.jsx'
 import '../../index.css'
 import '../header/header.css'
 import '../defaultMainContainer/defaultMainContainer.css'
+import '../career/career.css'
 import '../footer/footer.css'
 
 createRoot(document.getElementById('root')).render(
