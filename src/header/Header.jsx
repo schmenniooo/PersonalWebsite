@@ -1,10 +1,12 @@
 
+import { Link } from 'react-router-dom';
+
 function Header(){
 
     const navigationItems = [
-        ["Me", "/public"],
-        ["My projects", "/public"],
-        ["My career", "/public"],
+        ["Me", "/"],
+        ["My career", "/career"],
+        ["My projects", "/projects"],
     ]
 
     return (
@@ -13,7 +15,9 @@ function Header(){
             <nav className="navContainer">
                 <ul className="navigationItemContainer">
                     {navigationItems.map(([text, link]) => (
-                        <li className="navigationItem" key={text}><a className="linkItem" href={link}>{text}</a></li>
+                        <li className="navigationItem" key={text}>
+                            <Link className="linkItem" to={link}>{text}</Link>
+                        </li>
                     ))}
                 </ul>
             </nav>
