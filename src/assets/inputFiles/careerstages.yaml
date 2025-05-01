@@ -1,0 +1,28 @@
+content:
+  career_stage1:
+    Title: "First Encounter with IT"
+    Date: "2022 - Goethe Gymnasium Regensburg"
+    description:
+      "My first exposure to programming came during my time at the Goethe-Gymnasium in Regensburg. 
+      At first, I disliked it – but over time, my curiosity grew. 
+      I started exploring IT topics on my own outside of class and eventually realized 
+      that I could imagine turning it into a career."
+
+  career_stage2:
+    title: "Start of Apprenticeship in Software Development"
+    date: "2023 – 2026 (expected)"
+    description:
+      "I decided to leave school before graduating, as I no longer saw value in staying just to obtain a diploma. 
+      I wanted to apply my interest and the skills I had already developed. 
+      So I began my apprenticeship as an IT specialist in application development at Vector Informatik GmbH. 
+      For the first time, I truly felt that I was in the right place."
+
+  career_stage3:
+    title: "Specialization and Personal Growth"
+    date: "During Apprenticeship (2023–2026)"
+    description:
+      "Alongside my apprenticeship, I continuously pursued my goal of becoming a professional software developer. 
+      I explored different areas – from embedded systems to enterprise application development. 
+      In my free time, I taught myself the fundamentals of web development and discovered a strong interest in 
+      software design, user logic, and usability. This phase helped me understand what kind of developer I want 
+      to become in future."
