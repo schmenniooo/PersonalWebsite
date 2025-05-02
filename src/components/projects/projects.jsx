@@ -53,16 +53,13 @@ function Projects() {
                                         <h2 className="project-title">{project.title}</h2>
                                         <p className="project-tech">{project.usedTech}</p>
                                         <p className="project-description">{project.description}</p>
-                                        {(project.repo_link) && (
-                                            <a
-                                                href={project.repo_link}
-                                                className="project-link" 
-                                                target="_blank" 
-                                                rel="noopener noreferrer"
-                                            >
-                                                View Repository
-                                            </a>
-                                        )}
+                                        <a
+                                            href={project.repo_Link}
+                                            className="project-link"
+                                            target="_blank"
+                                        >
+                                            View GitHub-Repository
+                                        </a>
                                     </div>
                                 </div>
                             </div>
