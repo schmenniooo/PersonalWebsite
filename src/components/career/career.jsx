@@ -11,7 +11,7 @@ function CareerContent() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const data = await yamlReader.readYamlFile('./src/assets/inputFiles/careerstages.yaml');
+                const data = await yamlReader.readYamlFile('/data/careerstages.yaml');
                 setCareerStages(data.content);
                 setLoading(false);
             } catch (err) {

@@ -11,7 +11,7 @@ function DefaultMainContainer() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const data = await yamlReader.readYamlFile('./src/assets/inputFiles/description.yaml');
+                const data = await yamlReader.readYamlFile('/data/description.yaml');
                 setParagraphs(data.paragraphContent);
                 setLoading(false);
             } catch (err) {
