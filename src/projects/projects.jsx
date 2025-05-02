@@ -48,14 +48,14 @@ function Projects() {
                         {Object.entries(projects).map(([key, project]) => (
                             <div key={key} className="projectItem">
                                 <div className="project-content">
-                                    <span className="project-icon">{getTechEmoji(project.usedTech || project.UsedTech)}</span>
+                                    <span className="project-icon">{getTechEmoji(project.usedTech)}</span>
                                     <div className="project-details">
-                                        <h2 className="project-title">{project.title || project.Title}</h2>
-                                        <p className="project-tech">{project.usedTech || project.UsedTech || "Various technologies"}</p>
-                                        <p className="project-description">{project.description || project.Description}</p>
-                                        {(project.Repo_Link || project.repo_link) && (
-                                            <a 
-                                                href={project.Repo_Link || project.repo_link} 
+                                        <h2 className="project-title">{project.title}</h2>
+                                        <p className="project-tech">{project.usedTech}</p>
+                                        <p className="project-description">{project.description}</p>
+                                        {(project.repo_link) && (
+                                            <a
+                                                href={project.repo_link}
                                                 className="project-link" 
                                                 target="_blank" 
                                                 rel="noopener noreferrer"

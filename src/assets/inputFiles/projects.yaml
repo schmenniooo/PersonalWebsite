@@ -13,11 +13,11 @@ projects:
       logic, and dynamically populated via YAML data. Particular focus 
       was placed on clean design, usability, and technical clarity."
     usedTech: "React, Javascript, Css"
-    Repo_Link: "https://github.com/schmenniooo/PersonalWebsite"
+    repo_Link: "https://github.com/schmenniooo/PersonalWebsite"
 
   Project2:
-    Title: "Website for my local barber"
-    Description:
+    title: "Website for my local barber"
+    description:
       "This project was a custom-built website for my local hairdresser, 
       developed using plain HTML, CSS, and JavaScript, 
       without relying on any frameworks. 
@@ -27,5 +27,5 @@ projects:
       contact information, and a personal description of the team-members. 
       I also offered this project as a real, usable website for the salon, 
       making it my first client-oriented work."
-    usedTech:
-    Repo_Link: "https://github.com/schmenniooo/LeoHairSalon"
+    usedTech: "Html, Css, Javascript"
+    repo_Link: "https://github.com/schmenniooo/LeoHairSalon"
