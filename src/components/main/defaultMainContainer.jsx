@@ -1,5 +1,5 @@
 
-import yamlReader from '../datasource/yamlReader.js'
+import yamlReader from '../../datasource/yamlReader.js'
 import { useState, useEffect } from 'react';
 
 function DefaultMainContainer() {

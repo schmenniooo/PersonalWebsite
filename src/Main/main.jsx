@@ -3,10 +3,10 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import App from './App.jsx'
 import '../../index.css'
-import '../header/header.css'
-import '../defaultMainContainer/defaultMainContainer.css'
-import '../career/career.css'
-import '../footer/footer.css'
+import '../components/header/header.css'
+import '../components/main/defaultMainContainer.css'
+import '../components/career/career.css'
+import '../components/footer/footer.css'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

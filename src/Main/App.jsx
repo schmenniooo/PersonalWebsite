@@ -1,9 +1,9 @@
 
-import Header from '../header/Header.jsx'
-import DefaultMainContainer from '../defaultMainContainer/defaultMainContainer.jsx'
-import CareerContent from '../career/career.jsx'
-import Projects from '../projects/projects.jsx'
-import Footer from '../footer/Footer.jsx'
+import Header from '../components/header/Header.jsx'
+import DefaultMainContainer from '../components/main/defaultMainContainer.jsx'
+import CareerContent from '../components/career/career.jsx'
+import Projects from '../components/projects/projects.jsx'
+import Footer from '../components/footer/Footer.jsx'
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
