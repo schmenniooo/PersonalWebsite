@@ -24,7 +24,7 @@ function Footer() {
                         </a>
                     </li>
                     <li>
-                        <a href="#" aria-label="Email">
+                        <a href="mailto:ennio.nick@gmail.com" aria-label="Email">
                             <FaEnvelope className="social-icon" />
                         </a>
                     </li>
