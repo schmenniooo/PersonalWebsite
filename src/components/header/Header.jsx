@@ -11,7 +11,7 @@ function Header(){
 
     return (
         <div className="headerContainer">
-            <h1>Ennio Schmidt</h1>
+            <h1><Link className="headingLink" to="/">Ennio Schmidt</Link></h1>
             <nav className="navContainer">
                 <ul className="navigationItemContainer">
                     {navigationItems.map(([text, link]) => (

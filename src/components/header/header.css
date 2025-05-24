@@ -25,6 +25,12 @@
     transform: scale(1.05);
 }
 
+.headingLink {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+}
+
 .navContainer {
     display: flex;
     justify-content: center;
