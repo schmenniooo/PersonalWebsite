@@ -22,6 +22,8 @@ function Skills() {
                 setLoading(false);
             }
         }
+
+        fetchData();
     })
 
     return (
