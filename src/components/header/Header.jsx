@@ -7,6 +7,7 @@ function Header(){
         ["Me", "/"],
         ["My career", "/career"],
         ["My projects", "/projects"],
+        ["My Skills", "/skills"]
     ]
 
     return (
