@@ -103,23 +103,6 @@
     margin: 0;
 }
 
-.loading-spinner {
-    color: white;
-    font-size: 1.2rem;
-    margin: 2rem 0;
-    text-align: center;
-}
-
-.error-message {
-    color: #ff6b6b;
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 1rem 2rem;
-    border-radius: 8px;
-    font-weight: 500;
-    text-align: center;
-    margin: 2rem 0;
-}
-
 /* Responsive Design */
 @media (max-width: 768px) {
     .careerContainer {
@@ -186,6 +169,7 @@
 
     .career-content {
         gap: 0.6rem;
+        padding: 10px;
     }
 
     .career-icon {

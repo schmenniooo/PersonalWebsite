@@ -1,0 +1,40 @@
+
+skills:
+
+  Frontend:
+
+    skill1:
+      name: HTML
+      percent: 70
+
+    skill2:
+      name: CSS
+      percent: 70
+
+    skill3:
+      name: Javascript
+      percent: 50
+
+    skill4:
+      name: React
+      percent: 60
+
+  Backend:
+
+    skill1:
+      name: Java
+      percent: 70
+
+  Tools:
+
+    skill1:
+      name: Git
+      percent: 70
+
+    skill2:
+      name: Github
+      percent: 70
+
+    skill3:
+      name: Jetbrains IDE's
+      percent: 70
