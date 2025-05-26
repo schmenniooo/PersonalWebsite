@@ -34,14 +34,14 @@ function Skills() {
                 {loading && <div className="loading-spinner">Loading skills...</div>}
                 {error && <div className="error-message">{error}</div>}
                 {skills && (
-                    <div className="skillsItemContainer">
+                    <div className="skillGroupContainer">
                         {Object.entries(skills).map(([category, skillGroup]) => (
-                            <section key={category} className="fieldContainer">
-                                <h2 className="fieldHeading">{category}</h2>
+                            <section key={category} className="skillGroupItem">
+                                <h2 className="skillGroupHeading">{category}</h2>
                                 {Object.entries(skillGroup).map(([key, skill]) => (
                                     <section key={key} className="skillItem">
-                                        <h3>{skill.name}</h3>
-                                        <progress max="100" value={skill.percent}></progress>
+                                        <h3 className="skillHeading">{skill.name}</h3>
+                                        <progress className="skillProgressBar" max="100" value={skill.percent}></progress>
                                     </section>
                                 ))}
                             </section>
