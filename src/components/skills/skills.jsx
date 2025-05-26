@@ -34,8 +34,21 @@ function Skills() {
 
                 {loading && <div className="loading-spinner">Loading skills...</div>}
                 {error && <div className="error-message">{error}</div>}
-
-                // Todo: Add skills
+                {skills && (
+                    <div className="skillsItemContainer">
+                        {Object.entries(skills).map(([key, field]) => (
+                            <section key={key} className="fieldContainer">
+                                <h2 className="fieldHeading">{field}</h2>
+                                {Object.entries(field).map(([key, skill]) => (
+                                    <section key={key} className="skillItem">
+                                        <h3>{skill}</h3>
+                                        <progress max="100" value={skill.percent}></progress>
+                                    </section>
+                                ))}
+                            </section>
+                        ))}
+                    </div>
+                )}
             </div>
         </div>
     )
