@@ -5,36 +5,36 @@ skills:
 
     skill1:
       name: HTML
-      perCent: 70
+      percent: 70
 
     skill2:
       name: CSS
-      perCent: 70
+      percent: 70
 
     skill3:
       name: Javascript
-      perCent: 40
+      percent: 50
 
     skill4:
       name: React
-      perCent: 30
+      percent: 60
 
   Backend:
 
     skill1:
       name: Java
-      perCent: 70
+      percent: 70
 
   Tools:
 
     skill1:
       name: Git
-      perCent: 70
+      percent: 70
 
     skill2:
       name: Github
-      perCent: 60
+      percent: 70
 
     skill3:
       name: Jetbrains IDE's
-      perCent: 65
+      percent: 70
