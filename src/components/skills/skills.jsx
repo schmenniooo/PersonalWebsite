@@ -1,19 +1,18 @@
 
 import yamlReader from "../../datasource/yamlReader.js";
-import './skills.css'
-import {useEffect, useState} from "react";
+import './skills.css';
+import { useEffect, useState } from "react";
 
 function Skills() {
-
     const [skills, setSkills] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
     useEffect(() => {
-
         const fetchData = async () => {
             try {
                 const data = await yamlReader.readYamlFile('/data/skills.yaml');
+                console.log("Loaded skills:", data.skills); // optional debug
                 setSkills(data.skills);
                 setLoading(false);
             } catch (err) {
@@ -21,10 +20,10 @@ function Skills() {
                 setError('Failed to load skills. Please try again later.');
                 setLoading(false);
             }
-        }
+        };
 
         fetchData();
-    })
+    }, []);
 
     return (
         <div className="skillsContainer">
@@ -36,12 +35,12 @@ function Skills() {
                 {error && <div className="error-message">{error}</div>}
                 {skills && (
                     <div className="skillsItemContainer">
-                        {Object.entries(skills).map(([key, field]) => (
-                            <section key={key} className="fieldContainer">
-                                <h2 className="fieldHeading">{field}</h2>
-                                {Object.entries(field).map(([key, skill]) => (
+                        {Object.entries(skills).map(([category, skillGroup]) => (
+                            <section key={category} className="fieldContainer">
+                                <h2 className="fieldHeading">{category}</h2>
+                                {Object.entries(skillGroup).map(([key, skill]) => (
                                     <section key={key} className="skillItem">
-                                        <h3>{skill}</h3>
+                                        <h3>{skill.name}</h3>
                                         <progress max="100" value={skill.percent}></progress>
                                     </section>
                                 ))}
@@ -51,7 +50,7 @@ function Skills() {
                 )}
             </div>
         </div>
-    )
+    );
 }
 
-export default Skills
+export default Skills;
