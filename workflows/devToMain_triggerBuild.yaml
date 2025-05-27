@@ -1,0 +1,37 @@
+name: Trigger Netlify Build on dev → main Merge
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  check-dev-merge:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout the repo
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0  # Important to access full history
+
+      - name: Check if any of the new commits came from dev
+        id: check_dev
+        run: |
+          # Find the merge base between main and dev
+          git fetch origin dev
+          MERGE_BASE=$(git merge-base origin/main origin/dev)
+
+          # See if any of the new commits on main are in dev
+          if git log $MERGE_BASE..HEAD --oneline | grep -q "$(git rev-parse origin/dev)"; then
+            echo "dev was just merged into main"
+            echo "trigger_build=true" >> $GITHUB_OUTPUT
+          else
+            echo "No dev merge detected"
+            echo "trigger_build=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Trigger Netlify build
+        if: steps.check_dev.outputs.trigger_build == 'true'
+        run: |
+          curl -X POST -d '{}' https://api.netlify.com/build_hooks/6831bf3147913fccae1c8b12
