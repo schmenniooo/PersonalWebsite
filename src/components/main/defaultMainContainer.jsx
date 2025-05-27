@@ -11,11 +11,11 @@ function DefaultMainContainer() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const data = await yamlReader.readYamlFile('/data/description.yaml');
+                const data = await yamlReader.readYamlFile('/inputData/description.yaml');
                 setParagraphs(data.paragraphContent);
                 setLoading(false);
             } catch (err) {
-                console.error('Error fetching YAML data:', err);
+                console.error('Error fetching YAML inputData:', err);
                 setError('Failed to load content. Please try again later.');
                 setLoading(false);
             }

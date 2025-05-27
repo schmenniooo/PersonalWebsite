@@ -10,7 +10,7 @@ function Projects() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const data = await yamlReader.readYamlFile('/data/projects.yaml');
+                const data = await yamlReader.readYamlFile('/inputData/projects.yaml');
                 setProjects(data.projects);
                 setLoading(false);
             } catch (err) {

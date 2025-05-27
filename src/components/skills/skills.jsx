@@ -11,7 +11,7 @@ function Skills() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const data = await yamlReader.readYamlFile('/data/skills.yaml');
+                const data = await yamlReader.readYamlFile('/inputData/skills.yaml');
                 console.log("Loaded skills:", data.skills); // optional debug
                 setSkills(data.skills);
                 setLoading(false);
