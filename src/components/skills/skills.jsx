@@ -12,7 +12,7 @@ function Skills() {
         const fetchData = async () => {
             try {
                 const data = await yamlReader.readYamlFile('/inputData/skills.yaml');
-                console.log("Loaded skills:", data.skills); // optional debug
+                console.log("Loaded skills:", data.skills);
                 setSkills(data.skills);
                 setLoading(false);
             } catch (err) {
