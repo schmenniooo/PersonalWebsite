@@ -39,7 +39,7 @@ skills:
       name: Jetbrains IDE's
       percent: 70
 
-  Soft skills:
+  Softskills:
 
     skill1:
       name: Communication
@@ -47,7 +47,7 @@ skills:
       ensuring that colleagues easily understand complex ideas. Fluent in 
       German and English, I adapt my language to suit technical and 
       non-technical audiences alike."
-      emoji: 💬
+      icon: 💬
 
     skill2:
       name: Presentation
@@ -55,7 +55,7 @@ skills:
       audience with clarity, creativity, and a touch of humor. I focus 
       on making complex ideas easy to follow, turning every presentation 
       into a compelling story."
-      emoji: 🖥️
+      icon: 🖥️
 
     skill3:
       name: Problem Solving
@@ -71,7 +71,7 @@ skills:
       structured code is my standard from the first line to release. 
       Whether it’s project structure or file organization, I bring order 
       and consistency to everything I do."
-      emoji: 🔍
+      icon: 🔍
 
     skill5:
       name: Mentoring
@@ -79,7 +79,7 @@ skills:
       interns and apprentices. I have a passion for explaining complex topics 
       in a simple, approachable way and take pride in supporting others as they 
       grow in their roles."
-      emoji: 👥
+      icon: 👥
 
     skill6:
       name: Organisation
@@ -87,4 +87,4 @@ skills:
       bringing clarity to workflows. Whether it’s supporting 
       onboarding or contributing fresh ideas, I keep the bigger picture in 
       mind while staying flexible and ready to adapt when needed."
-      emoji: 🗂️
+      icon: 🗂️

@@ -38,6 +38,7 @@ function Skills() {
         if (categoryLower.includes("mobile")) return "📱";
         if (categoryLower.includes("design")) return "✏️";
         if (categoryLower.includes("language")) return "🔤";
+        if (categoryLower.includes("soft")) return "🤝";
         return "💻"; // Default emoji
     };
 
@@ -57,17 +58,36 @@ function Skills() {
                                     <span className="skill-category-icon">{getCategoryIcon(category)}</span>
                                     {category}
                                 </h2>
-                                {Object.entries(skillGroup).map(([key, skill]) => (
-                                    <section key={key} className="skillItem">
-                                        <h3 className="skillHeading">{skill.name}</h3>
-                                        <div className="skill-progress-container">
-                                            <progress className="skillProgressBar" max="100" value={skill.percent}></progress>
-                                            <span className="skill-percent">{skill.percent}%</span>
-                                        </div>
-                                    </section>
-                                ))}
+                                {category === "Softskills" ? (
+                                    <div className="softSkillsGrid">
+                                        {Object.entries(skillGroup).map(([key, skill]) => (
+                                            <div key={key} className="softSkillItem">
+                                                <h3 className="softSkillName">
+                                                    <span className="softSkillIcon">{skill.icon}</span>
+                                                    {skill.name}
+                                                </h3>
+                                                <p className="softSkillDescription">{skill.description}</p>
+                                            </div>
+                                        ))}
+                                    </div>
+                                ) : (
+                                    Object.entries(skillGroup).map(([key, skill]) => (
+                                        <section key={key} className="skillItem">
+                                            <h3 className="skillHeading">{skill.name}</h3>
+                                            <div className="skill-progress-container">
+                                                <progress
+                                                    className="skillProgressBar"
+                                                    max="100"
+                                                    value={skill.percent}
+                                                ></progress>
+                                                <span className="skill-percent">{skill.percent}%</span>
+                                            </div>
+                                        </section>
+                                    ))
+                                )}
                             </section>
                         ))}
+
                     </div>
                 )}
             </div>
