@@ -38,3 +38,53 @@ skills:
     skill3:
       name: Jetbrains IDE's
       percent: 70
+
+  Soft skills:
+
+    skill1:
+      name: Communication
+      description: "I communicate clearly in both spoken and written form, 
+      ensuring that colleagues easily understand complex ideas. Fluent in 
+      German and English, I adapt my language to suit technical and 
+      non-technical audiences alike."
+      emoji: 💬
+
+    skill2:
+      name: Presentation
+      description: "I enjoy presenting my work and take pride in engaging my 
+      audience with clarity, creativity, and a touch of humor. I focus 
+      on making complex ideas easy to follow, turning every presentation 
+      into a compelling story."
+      emoji: 🖥️
+
+    skill3:
+      name: Problem Solving
+      description: "Bugs and challenges are part of the job—I approach them 
+      with determination and persistence. I don’t give up easily, and 
+      I’m proactive about seeking help when needed to ensure every 
+      issue gets resolved efficiently."
+      emoji: 🧩
+
+    skill4:
+      name: Attention to Detail
+      description: "I’m known for my precision and organized approach—clean, 
+      structured code is my standard from the first line to release. 
+      Whether it’s project structure or file organization, I bring order 
+      and consistency to everything I do."
+      emoji: 🔍
+
+    skill5:
+      name: Mentoring
+      description: "Since the start of my career, I’ve enjoyed mentoring 
+      interns and apprentices. I have a passion for explaining complex topics 
+      in a simple, approachable way and take pride in supporting others as they 
+      grow in their roles."
+      emoji: 👥
+
+    skill6:
+      name: Organisation
+      description: "I enjoy structuring processes and 
+      bringing clarity to workflows. Whether it’s supporting 
+      onboarding or contributing fresh ideas, I keep the bigger picture in 
+      mind while staying flexible and ready to adapt when needed."
+      emoji: 🗂️
