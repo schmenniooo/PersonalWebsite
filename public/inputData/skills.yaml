@@ -1,0 +1,90 @@
+
+skills:
+
+  Frontend:
+
+    skill1:
+      name: HTML
+      percent: 70
+
+    skill2:
+      name: CSS
+      percent: 70
+
+    skill3:
+      name: Javascript
+      percent: 50
+
+    skill4:
+      name: React
+      percent: 60
+
+  Backend:
+
+    skill1:
+      name: Java
+      percent: 70
+
+  Tools:
+
+    skill1:
+      name: Git
+      percent: 70
+
+    skill2:
+      name: Github
+      percent: 70
+
+    skill3:
+      name: Jetbrains IDE's
+      percent: 70
+
+  Softskills:
+
+    skill1:
+      name: Communication
+      description: "I communicate clearly in both spoken and written form, 
+      ensuring that colleagues easily understand complex ideas. Fluent in 
+      German and English, I adapt my language to suit technical and 
+      non-technical audiences alike."
+      icon: 💬
+
+    skill2:
+      name: Presentation
+      description: "I enjoy presenting my work and take pride in engaging my 
+      audience with clarity, creativity, and a touch of humor. I focus 
+      on making complex ideas easy to follow, turning every presentation 
+      into a compelling story."
+      icon: 🖥️
+
+    skill3:
+      name: Problem Solving
+      description: "Bugs and challenges are part of the job—I approach them 
+      with determination and persistence. I don’t give up easily, and 
+      I’m proactive about seeking help when needed to ensure every 
+      issue gets resolved efficiently."
+      icon: 🧩
+
+    skill4:
+      name: Attention to Detail
+      description: "I’m known for my precision and organized approach—clean, 
+      structured code is my standard from the first line to release. 
+      Whether it’s project structure or file organization, I bring order 
+      and consistency to everything I do."
+      icon: 🔍
+
+    skill5:
+      name: Mentoring
+      description: "Since the start of my career, I’ve enjoyed mentoring 
+      interns and apprentices. I have a passion for explaining complex topics 
+      in a simple, approachable way and take pride in supporting others as they 
+      grow in their roles."
+      icon: 👥
+
+    skill6:
+      name: Organisation
+      description: "I enjoy structuring processes and 
+      bringing clarity to workflows. Whether it’s supporting 
+      onboarding or contributing fresh ideas, I keep the bigger picture in 
+      mind while staying flexible and ready to adapt when needed."
+      icon: 🗂️

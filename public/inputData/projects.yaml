@@ -10,7 +10,7 @@ projects:
       but also to demonstrate my practical development skills. 
       The site acts as a second, interactive résume — 
       designed with modern web technologies, structured with component 
-      logic, and dynamically populated via YAML data. Particular focus 
+      logic, and dynamically populated via YAML inputData. Particular focus 
       was placed on clean design, usability, and technical clarity."
     usedTech: "React, Javascript, Css"
     repo_Link: "https://github.com/schmenniooo/PersonalWebsite"
