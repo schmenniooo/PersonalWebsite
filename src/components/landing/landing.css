@@ -15,9 +15,10 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 40%;
+    width: 50%;
     max-width: 900px;
     padding: 1rem;
+    margin: 1rem 0;
     border-radius: 20px;
     background-color: white;
     color: black;
@@ -94,4 +95,79 @@
 .redirector:active {
     background-color: #003cff;
     border-color: #003cff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .landingContainer {
+        padding: 3rem 1rem;
+    }
+
+    .landingCard {
+        width: 70%;
+        padding: 1.5rem;
+    }
+
+    .pictureContainer {
+        padding: 1.5rem;
+    }
+
+    .picture {
+        max-width: 250px;
+    }
+
+    .landingHeading {
+        font-size: 2rem;
+    }
+
+    .landingText {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .landing-divider {
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .landingContainer {
+        padding: 2rem 0.75rem;
+    }
+
+    .landingCard {
+        width: 90%;
+        padding: 1.25rem;
+        border-radius: 15px;
+    }
+
+    .pictureContainer {
+        padding: 1rem;
+    }
+
+    .picture {
+        max-width: 200px;
+        border-width: 3px;
+    }
+
+    .landingHeading {
+        font-size: 1.75rem;
+    }
+
+    .landingText {
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+
+    .landing-divider {
+        width: 60px;
+        height: 3px;
+        margin-bottom: 1.25rem;
+    }
+
+    .redirector {
+        margin: 0.75rem 0 1.5rem 0;
+        padding: 0.4rem 0.8rem;
+        font-size: 0.9rem;
+    }
 }
