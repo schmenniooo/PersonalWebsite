@@ -9,7 +9,7 @@ function Landing() {
                 <section className="pictureContainer">
                     <img className="picture" src="src/assets/logo.png" alt="Me"></img>
                 </section>
-
+                <div className="landing-devider"></div>
                 <h1 className="landigHeading">Welcome!</h1>
                 <p className="landingText">My name is Ennio and I'm a Software Engineer..</p>
                 <button className="redirector">Go to Mainpage</button>

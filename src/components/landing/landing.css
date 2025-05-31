@@ -6,7 +6,7 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    padding: 2rem 1rem;
+    padding: 4rem 1rem;
 }
 
 .landingCard {
@@ -15,9 +15,9 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 50%;
+    width: 40%;
     max-width: 900px;
-    padding: 2rem;
+    padding: 1rem;
     border-radius: 20px;
     background-color: white;
     color: black;
@@ -43,6 +43,15 @@
     border: 5px solid black;
 }
 
+.landing-divider {
+
+    height: 4px;
+    background: linear-gradient(90deg, #1e3c72, #2a5298);
+    width: 80px;
+    margin: 0 auto 2rem auto;
+    border-radius: 2px;
+}
+
 .landingHeading {
 
     font-size: 2.5rem;
@@ -62,5 +71,10 @@
 
 .redirector {
 
-
+    background-color: #004cff;
+    border-color: #004cff;
+    border-radius: 4px;
+    margin: 1rem 0 2rem 0;
+    padding: 0.5rem 1rem;
+    color: white;
 }
