@@ -11,7 +11,7 @@ function Landing({ onClose }) {
         <div className="landingContainer">
             <div className="landingCard">
                 <section className="pictureContainer">
-                    <img className="picture" src="../../../public/images/logo.png" alt="Me"></img>
+                    <img className="picture" src="/images/logo.png" alt="Me"></img>
                 </section>
                 <div className="landing-divider"></div>
                 <h1 className="landingHeading">Welcome!</h1>
