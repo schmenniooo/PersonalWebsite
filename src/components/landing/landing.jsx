@@ -12,7 +12,6 @@ function Landing() {
 
                 <h1 className="landigHeading">Welcome!</h1>
                 <p className="landingText">My name is Ennio and I'm a Software Engineer..</p>
-                <span className="counter">counter</span>
                 <button className="redirector">Go to Mainpage</button>
             </div>
         </div>
