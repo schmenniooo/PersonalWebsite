@@ -1,7 +1,11 @@
 
 import './landing.css'
 
-function Landing() {
+function Landing({ onClose }) {
+
+    function goToMainPage() {
+        onClose();
+    }
 
     return (
         <div className="landingContainer">
@@ -12,7 +16,7 @@ function Landing() {
                 <div className="landing-divider"></div>
                 <h1 className="landingHeading">Welcome!</h1>
                 <p className="landingText">My name is Ennio and I'm a Software Engineer..</p>
-                <button className="redirector">Go ahead</button>
+                <button className="redirector" onClick={goToMainPage}>Go ahead</button>
             </div>
         </div>
     )
