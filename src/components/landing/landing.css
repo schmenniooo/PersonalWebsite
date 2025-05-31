@@ -1,26 +1,60 @@
 
 .landingContainer {
 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 2rem 1rem;
 }
 
 .landingCard {
 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 900px;
+    padding: 2rem;
+    border-radius: 20px;
+    background-color: white;
+    color: black;
 }
 
 .pictureContainer {
 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 900px;
+    padding: 2rem;
+    border-radius: 20px;
 }
 
 .picture {
+
 
 }
 
 .landingHeading {
 
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 0 1rem 0;
+    color: #1e3c72;
 }
 
 .landingText {
 
+    font-size: 1.1rem;
+    line-height: 1.8;
+    text-align: center;
+    margin: 0 0 1rem 0;
 }
 
 .counter {
