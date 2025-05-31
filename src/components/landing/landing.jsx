@@ -7,10 +7,10 @@ function Landing() {
         <div className="landingContainer">
             <div className="landingCard">
                 <section className="pictureContainer">
-                    <img className="picture" alt="Me"></img>
+                    <img className="picture" src="src/assets/logo.png" alt="Me"></img>
                 </section>
 
-                <h2 className="landigHeading">Welcome!</h2>
+                <h1 className="landigHeading">Welcome!</h1>
                 <p className="landingText">My name is Ennio and I'm Software Engineer..</p>
                 <span className="counter">counter</span>
                 <button className="redirector">Go to Mainpage</button>
