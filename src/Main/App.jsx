@@ -22,7 +22,7 @@ function App() {
             {showLanding ? (
                 <Landing onClose={handleLanding} />
             ) : (
-                <>
+                <div className="app-container">
                     <Header />
                     <Routes>
                         <Route path="/" element={<DefaultMainContainer />} />
@@ -31,7 +31,7 @@ function App() {
                         <Route path="/projects" element={<Projects />} />
                     </Routes>
                     <Footer />
-                </>
+                </div>
             )}
         </BrowserRouter>
     )
