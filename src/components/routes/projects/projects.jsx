@@ -1,4 +1,6 @@
+
 import yamlReader from '../../../datasource/yaml/yamlReader.js'
+import iconBuilder from "../../../datasource/icons/iconBuilder.js";
 import { useState, useEffect } from 'react';
 import './projects.css';
 
@@ -23,18 +25,6 @@ function Projects() {
         fetchData();
     }, []);
 
-    // Project emojis based on technology
-    const getTechEmoji = (tech) => {
-        if (!tech) return "💻"; // Default emoji
-
-        const techLower = tech.toLowerCase();
-        if (techLower.includes("react")) return "⚛️";
-        if (techLower.includes("javascript")) return "🟨";
-        if (techLower.includes("html")) return "🌐";
-        if (techLower.includes("css")) return "🎨";
-        return "💻"; // Default emoji
-    };
-
     return (
         <div className="projectsContainer">
             <div className="projects-card">
@@ -48,7 +38,7 @@ function Projects() {
                         {Object.entries(projects).map(([key, project]) => (
                             <div key={key} className="projectItem">
                                 <div className="project-content">
-                                    <span className="project-icon">{getTechEmoji(project.usedTech)}</span>
+                                    <span className="project-icon">{iconBuilder.getTechEmoji(project.usedTech)}</span>
                                     <div className="project-details">
                                         <h2 className="project-title">{project.title}</h2>
                                         <p className="project-tech">{project.usedTech}</p>

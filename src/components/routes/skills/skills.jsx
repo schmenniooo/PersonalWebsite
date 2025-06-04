@@ -1,5 +1,6 @@
 
 import yamlReader from "../../../datasource/yaml/yamlReader.js";
+import iconBuilder from "../../../datasource/icons/iconBuilder.js";
 import './skills.css';
 import { useEffect, useState } from "react";
 
@@ -25,23 +26,6 @@ function Skills() {
         fetchData();
     }, []);
 
-    // Get appropriate emoji for each skill category
-    const getCategoryIcon = (category) => {
-        if (!category) return "💻"; // Default emoji
-
-        const categoryLower = category.toLowerCase();
-        if (categoryLower.includes("frontend")) return "🎨";
-        if (categoryLower.includes("backend")) return "⚙️";
-        if (categoryLower.includes("tools")) return "🔧";
-        if (categoryLower.includes("database")) return "🗄️";
-        if (categoryLower.includes("devops")) return "🚀";
-        if (categoryLower.includes("mobile")) return "📱";
-        if (categoryLower.includes("design")) return "✏️";
-        if (categoryLower.includes("language")) return "🔤";
-        if (categoryLower.includes("soft")) return "🤝";
-        return "💻"; // Default emoji
-    };
-
     return (
         <div className="skillsContainer">
             <div className="skills-card">
@@ -55,7 +39,7 @@ function Skills() {
                         {Object.entries(skills).map(([category, skillGroup]) => (
                             <section key={category} className="skillGroupItem">
                                 <h2 className="skillGroupHeading">
-                                    <span className="skill-category-icon">{getCategoryIcon(category)}</span>
+                                    <span className="skill-category-icon">{iconBuilder.getCategoryIcon(category)}</span>
                                     {category}
                                 </h2>
                                 {category === "Softskills" ? (
