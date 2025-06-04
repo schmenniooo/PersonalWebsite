@@ -38,7 +38,7 @@ function Projects() {
                         {Object.entries(projects).map(([key, project]) => (
                             <div key={key} className="projectItem">
                                 <div className="project-content">
-                                    <span className="project-icon">{iconBuilder.getTechEmoji(project.usedTech)}</span>
+                                    <span className="project-icon">{iconBuilder.getIcon(project.usedTech)}</span>
                                     <div className="project-details">
                                         <h2 className="project-title">{project.title}</h2>
                                         <p className="project-tech">{project.usedTech}</p>

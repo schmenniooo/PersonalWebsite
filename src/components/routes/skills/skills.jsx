@@ -39,7 +39,7 @@ function Skills() {
                         {Object.entries(skills).map(([category, skillGroup]) => (
                             <section key={category} className="skillGroupItem">
                                 <h2 className="skillGroupHeading">
-                                    <span className="skill-category-icon">{iconBuilder.getCategoryIcon(category)}</span>
+                                    <span className="skill-category-icon">{iconBuilder.getIcon(category)}</span>
                                     {category}
                                 </h2>
                                 {category === "Softskills" ? (
