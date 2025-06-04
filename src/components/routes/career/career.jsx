@@ -1,5 +1,6 @@
 
 import yamlReader from '../../../datasource/yaml/yamlReader.js'
+import iconBuilder from '../../../datasource/icons/iconBuilder.js';
 import { useState, useEffect } from 'react';
 import './career.css';
 
@@ -24,12 +25,6 @@ function CareerContent() {
         fetchData();
     }, []);
 
-    // Career stage emojis
-    const stageEmojis = {
-        career_stage1: "🚀", // First encounter
-        career_stage2: "💼", // Apprenticeship
-        career_stage3: "🌱", // Growth
-    };
 
     return (
         <div className="careerContainer">
@@ -44,7 +39,7 @@ function CareerContent() {
                         {Object.entries(careerStages).map(([key, stage]) => (
                             <div key={key} className="careerItem">
                                 <div className="career-content">
-                                    <span className="career-icon">{stageEmojis[key] || "👨‍💻"}</span>
+                                    <span className="career-icon">{iconBuilder.getCareerStageIcon(key)}</span>
                                     <div className="career-details">
                                         <h2 className="career-stage-title">{stage.title}</h2>
                                         <p className="career-date">{stage.date}</p>
