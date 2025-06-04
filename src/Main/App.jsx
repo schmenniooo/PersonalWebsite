@@ -1,10 +1,10 @@
 
 import Landing from '../components/landing/landing.jsx'
 import Header from '../components/header/Header.jsx'
-import DefaultMainContainer from '../components/main/defaultMainContainer.jsx'
-import CareerContent from '../components/career/career.jsx'
-import Skills from "../components/skills/skills.jsx";
-import Projects from '../components/projects/projects.jsx'
+import MainContainer from '../components/routes/main/mainContainer.jsx'
+import CareerContent from '../components/routes/career/career.jsx'
+import Skills from "../components/routes/skills/skills.jsx";
+import Projects from '../components/routes/projects/projects.jsx'
 import Footer from '../components/footer/Footer.jsx'
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import {useState} from "react";
@@ -25,7 +25,7 @@ function App() {
                 <div className="app-container">
                     <Header />
                     <Routes>
-                        <Route path="/" element={<DefaultMainContainer />} />
+                        <Route path="/" element={<MainContainer />} />
                         <Route path="/career" element={<CareerContent />} />
                         <Route path="/skills" element={<Skills />} />
                         <Route path="/projects" element={<Projects />} />

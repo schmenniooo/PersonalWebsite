@@ -1,8 +1,9 @@
 
-import yamlReader from '../../datasource/yamlReader.js'
+import yamlReader from '../../../datasource/yaml/yamlReader.js'
+import iconBuilder from '../../../datasource/icons/iconBuilder.js';
 import { useState, useEffect } from 'react';
 
-function DefaultMainContainer() {
+function MainContainer() {
 
     const [paragraphs, setParagraphs] = useState(null);
     const [loading, setLoading] = useState(true);
@@ -34,27 +35,14 @@ function DefaultMainContainer() {
                         <h1 className="profile-title">About Me</h1>
                         <div className="profile-divider"></div>
                         <div className="paragraphContainer">
-                            {Object.entries(paragraphs).map(([key, text], index) => {
-                                // Select an appropriate emoji based on paragraph content
-                                let emoji = "👨‍💻"; // Default developer emoji
-
-                                if (index === 0) {
-                                    emoji = "🚀"; // First paragraph - passion and growth
-                                } else if (index === 1) {
-                                    emoji = "💻"; // Second paragraph - skills
-                                } else if (index === 2) {
-                                    emoji = "⏱️"; // Third paragraph - experience
-                                }
-
-                                return (
-                                    <div key={key} className="paragraphItem">
-                                        <div className="paragraph-content">
-                                            <span className="paragraph-icon">{emoji}</span>
-                                            <p className="paragraph">{text}</p>
-                                        </div>
+                            {Object.entries(paragraphs).map(([key, text], index) => (
+                                <div key={key} className="paragraphItem">
+                                    <div className="paragraph-content">
+                                        <span className="paragraph-icon">{iconBuilder.getParagraphIcon(index)}</span>
+                                        <p className="paragraph">{text}</p>
                                     </div>
-                                );
-                            })}
+                                </div>
+                            ))}
                         </div>
                     </div>
                 )}
@@ -63,4 +51,4 @@ function DefaultMainContainer() {
     )
 }
 
-export default DefaultMainContainer
+export default MainContainer

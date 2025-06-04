@@ -99,6 +99,12 @@
     border-color: #003cff;
 }
 
+/* Ensure images are responsive */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .landingContainer {
@@ -107,6 +113,7 @@
 
     .landingCard {
         width: 70%;
+        min-width: 320px;
         padding: 1.5rem;
     }
 
@@ -130,6 +137,10 @@
     .landing-divider {
         margin-bottom: 1.5rem;
     }
+
+    .redirector {
+        font-size: 0.95rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -139,6 +150,7 @@
 
     .landingCard {
         width: 90%;
+        min-width: 250px;
         padding: 1.25rem;
         border-radius: 15px;
     }
@@ -171,5 +183,48 @@
         margin: 0.75rem 0 1.5rem 0;
         padding: 0.4rem 0.8rem;
         font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .landingContainer {
+        padding: 1.5rem 0.5rem;
+    }
+
+    .landingCard {
+        width: 95%;
+        min-width: auto;
+        padding: 1rem;
+        border-radius: 12px;
+    }
+
+    .pictureContainer {
+        padding: 0.75rem;
+    }
+
+    .picture {
+        max-width: 150px;
+        border-width: 2px;
+    }
+
+    .landingHeading {
+        font-size: 1.5rem;
+    }
+
+    .landingText {
+        font-size: 0.85rem;
+        line-height: 1.4;
+    }
+
+    .landing-divider {
+        width: 50px;
+        height: 2px;
+        margin-bottom: 1rem;
+    }
+
+    .redirector {
+        margin: 0.5rem 0 1rem 0;
+        padding: 0.35rem 0.7rem;
+        font-size: 0.85rem;
     }
 }
