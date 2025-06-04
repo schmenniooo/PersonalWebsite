@@ -2,7 +2,7 @@
 import yamlReader from '../../../datasource/yamlReader.js'
 import { useState, useEffect } from 'react';
 
-function DefaultMainContainer() {
+function MainContainer() {
 
     const [paragraphs, setParagraphs] = useState(null);
     const [loading, setLoading] = useState(true);
@@ -63,4 +63,4 @@ function DefaultMainContainer() {
     )
 }
 
-export default DefaultMainContainer
+export default MainContainer
