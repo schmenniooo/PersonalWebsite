@@ -1,7 +1,7 @@
 
 import './defaultRouteContainer.css'
 
-function DefaultRouteContainer(title) {
+function DefaultRouteContainer({ title, children }) {
 
     // TODO: Loading ?
     // TODO: Errors ?
@@ -12,6 +12,7 @@ function DefaultRouteContainer(title) {
             <div className="card">
                 <h1 className="title">{title}</h1>
                 <div className="divider"></div>
+                {children}
             </div>
         </div>
     )

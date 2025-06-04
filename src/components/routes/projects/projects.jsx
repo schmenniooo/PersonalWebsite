@@ -1,10 +1,12 @@
 
 import yamlReader from '../../../datasource/yaml/yamlReader.js'
 import iconBuilder from "../../../datasource/icons/iconBuilder.js";
+import DefaultRouteContainer from "../model/defaultContainer/defaultRouteContainer.jsx";
 import { useState, useEffect } from 'react';
 import './projects.css';
 
 function Projects() {
+
     const [projects, setProjects] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -26,38 +28,35 @@ function Projects() {
     }, []);
 
     return (
-        <div className="projectsContainer">
-            <div className="projects-card">
-                <h1 className="projects-title">My Projects</h1>
-                <div className="projects-divider"></div>
 
-                {loading && <div className="loading-spinner">Loading projects information...</div>}
-                {error && <div className="error-message">{error}</div>}
-                {projects && (
-                    <div className="projectsItemContainer">
-                        {Object.entries(projects).map(([key, project]) => (
-                            <div key={key} className="projectItem">
-                                <div className="project-content">
-                                    <span className="project-icon">{iconBuilder.getIcon(project.usedTech)}</span>
-                                    <div className="project-details">
-                                        <h2 className="project-title">{project.title}</h2>
-                                        <p className="project-tech">{project.usedTech}</p>
-                                        <p className="project-description">{project.description}</p>
-                                        <a
-                                            href={project.repo_Link}
-                                            className="project-link"
-                                            target="_blank"
-                                        >
-                                            View GitHub-Repository
-                                        </a>
-                                    </div>
+        <DefaultRouteContainer title="My Projects">
+
+            {loading && <div className="loading-spinner">Loading projects information...</div>}
+            {error && <div className="error-message">{error}</div>}
+            {projects && (
+                <div className="projectsItemContainer">
+                    {Object.entries(projects).map(([key, project]) => (
+                        <div key={key} className="projectItem">
+                            <div className="project-content">
+                                <span className="project-icon">{iconBuilder.getIcon(project.usedTech)}</span>
+                                <div className="project-details">
+                                    <h2 className="project-title">{project.title}</h2>
+                                    <p className="project-tech">{project.usedTech}</p>
+                                    <p className="project-description">{project.description}</p>
+                                    <a
+                                        href={project.repo_Link}
+                                        className="project-link"
+                                        target="_blank"
+                                    >
+                                        View GitHub-Repository
+                                    </a>
                                 </div>
                             </div>
-                        ))}
-                    </div>
-                )}
-            </div>
-        </div>
+                        </div>
+                    ))}
+                </div>
+            )}
+        </DefaultRouteContainer>
     );
 }
 

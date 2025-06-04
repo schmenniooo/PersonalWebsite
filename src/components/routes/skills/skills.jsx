@@ -1,10 +1,12 @@
 
 import yamlReader from "../../../datasource/yaml/yamlReader.js";
 import iconBuilder from "../../../datasource/icons/iconBuilder.js";
+import DefaultRouteContainer from "../model/defaultContainer/defaultRouteContainer.jsx";
 import './skills.css';
 import { useEffect, useState } from "react";
 
 function Skills() {
+
     const [skills, setSkills] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -27,55 +29,51 @@ function Skills() {
     }, []);
 
     return (
-        <div className="skillsContainer">
-            <div className="skills-card">
-                <h1 className="skills-title">My Skills</h1>
-                <div className="skills-divider"></div>
+        <DefaultRouteContainer title="My Skills">
 
-                {loading && <div className="loading-spinner">Loading skills...</div>}
-                {error && <div className="error-message">{error}</div>}
-                {skills && (
-                    <div className="skillGroupContainer">
-                        {Object.entries(skills).map(([category, skillGroup]) => (
-                            <section key={category} className="skillGroupItem">
-                                <h2 className="skillGroupHeading">
-                                    <span className="skill-category-icon">{iconBuilder.getIcon(category)}</span>
-                                    {category}
-                                </h2>
-                                {category === "Softskills" ? (
-                                    <div className="softSkillsGrid">
-                                        {Object.entries(skillGroup).map(([key, skill]) => (
-                                            <div key={key} className="softSkillItem">
-                                                <h3 className="softSkillName">
-                                                    <span className="softSkillIcon">{skill.icon}</span>
-                                                    {skill.name}
-                                                </h3>
-                                                <p className="softSkillDescription">{skill.description}</p>
-                                            </div>
-                                        ))}
-                                    </div>
-                                ) : (
-                                    Object.entries(skillGroup).map(([key, skill]) => (
-                                        <section key={key} className="skillItem">
-                                            <h3 className="skillHeading">{skill.name}</h3>
-                                            <div className="skill-progress-container">
-                                                <progress
-                                                    className="skillProgressBar"
-                                                    max="100"
-                                                    value={skill.percent}
-                                                ></progress>
-                                                <span className="skill-percent">{skill.percent}%</span>
-                                            </div>
-                                        </section>
-                                    ))
-                                )}
-                            </section>
-                        ))}
+            {loading && <div className="loading-spinner">Loading skills...</div>}
+            {error && <div className="error-message">{error}</div>}
+            {skills && (
+                <div className="skillGroupContainer">
+                    {Object.entries(skills).map(([category, skillGroup]) => (
+                        <section key={category} className="skillGroupItem">
+                            <h2 className="skillGroupHeading">
+                                <span className="skill-category-icon">{iconBuilder.getIcon(category)}</span>
+                                {category}
+                            </h2>
+                            {category === "Softskills" ? (
+                                <div className="softSkillsGrid">
+                                    {Object.entries(skillGroup).map(([key, skill]) => (
+                                        <div key={key} className="softSkillItem">
+                                            <h3 className="softSkillName">
+                                                <span className="softSkillIcon">{skill.icon}</span>
+                                                {skill.name}
+                                            </h3>
+                                            <p className="softSkillDescription">{skill.description}</p>
+                                        </div>
+                                    ))}
+                                </div>
+                            ) : (
+                                Object.entries(skillGroup).map(([key, skill]) => (
+                                    <section key={key} className="skillItem">
+                                        <h3 className="skillHeading">{skill.name}</h3>
+                                        <div className="skill-progress-container">
+                                            <progress
+                                                className="skillProgressBar"
+                                                max="100"
+                                                value={skill.percent}
+                                            ></progress>
+                                            <span className="skill-percent">{skill.percent}%</span>
+                                        </div>
+                                    </section>
+                                ))
+                            )}
+                        </section>
+                    ))}
 
-                    </div>
-                )}
-            </div>
-        </div>
+                </div>
+            )}
+        </DefaultRouteContainer>
     );
 }
 

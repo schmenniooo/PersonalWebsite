@@ -1,10 +1,12 @@
 
 import yamlReader from '../../../datasource/yaml/yamlReader.js'
 import iconBuilder from '../../../datasource/icons/iconBuilder.js';
+import DefaultRouteContainer from "../model/defaultContainer/defaultRouteContainer.jsx";
 import { useState, useEffect } from 'react';
 import './career.css';
 
 function CareerContent() {
+
     const [careerStages, setCareerStages] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -27,31 +29,27 @@ function CareerContent() {
 
 
     return (
-        <div className="careerContainer">
-            <div className="career-card">
-                <h1 className="career-title">My Career Journey</h1>
-                <div className="career-divider"></div>
+        <DefaultRouteContainer title="My Career Journey">
 
-                {loading && <div className="loading-spinner">Loading career information...</div>}
-                {error && <div className="error-message">{error}</div>}
-                {careerStages && (
-                    <div className="careerItemContainer">
-                        {Object.entries(careerStages).map(([key, stage]) => (
-                            <div key={key} className="careerItem">
-                                <div className="career-content">
-                                    <span className="career-icon">{iconBuilder.getCareerStageIcon(key)}</span>
-                                    <div className="career-details">
-                                        <h2 className="career-stage-title">{stage.title}</h2>
-                                        <p className="career-date">{stage.date}</p>
-                                        <p className="career-description">{stage.description}</p>
-                                    </div>
+            {loading && <div className="loading-spinner">Loading career information...</div>}
+            {error && <div className="error-message">{error}</div>}
+            {careerStages && (
+                <div className="careerItemContainer">
+                    {Object.entries(careerStages).map(([key, stage]) => (
+                        <div key={key} className="careerItem">
+                            <div className="career-content">
+                                <span className="career-icon">{iconBuilder.getCareerStageIcon(key)}</span>
+                                <div className="career-details">
+                                    <h2 className="career-stage-title">{stage.title}</h2>
+                                    <p className="career-date">{stage.date}</p>
+                                    <p className="career-description">{stage.description}</p>
                                 </div>
                             </div>
-                        ))}
-                    </div>
-                )}
-            </div>
-        </div>
+                        </div>
+                    ))}
+                </div>
+            )}
+        </DefaultRouteContainer>
     );
 }
 
