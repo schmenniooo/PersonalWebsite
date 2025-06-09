@@ -29,3 +29,13 @@ projects:
       making it my first client-oriented work."
     usedTech: "Html, Css, Javascript"
     repo_Link: "https://github.com/schmenniooo/LeoHairSalon"
+
+  Project3:
+    title: "Journaling Web App"
+    description:
+      "This web application is inspired by Apple’s Journal app and 
+      allows users to create dated journal entries. It includes features such as search and 
+      edit functionality. Future updates will introduce additional features like a streak tracker 
+      and more. The app is built with React.js and tested using Playwright."
+    usedTech: "React, Javascript, Playwright-Test-Framework"
+    repo_Link: "https://github.com/schmenniooo/Journal_IO"
