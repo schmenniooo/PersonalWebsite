@@ -36,6 +36,7 @@ projects:
       "This web application is inspired by Apple’s Journal app and 
       allows users to create dated journal entries. It includes features such as search and 
       edit functionality. Future updates will introduce additional features like a streak tracker 
-      and more. The app is built with React.js and tested using Playwright."
+      and more. The app is built with React.js, tested using Playwright and it can 
+      be downloaded and started via Docker."
     usedTech: "React, Javascript, Playwright-Test-Framework"
     repo_Link: "https://github.com/schmenniooo/Journal_IO"

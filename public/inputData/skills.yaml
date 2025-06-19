@@ -36,6 +36,10 @@ skills:
       percent: 70
 
     skill3:
+      name: Docker
+      percent: 40
+
+    skill4:
       name: Jetbrains IDE's
       percent: 70
 
