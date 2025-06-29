@@ -93,6 +93,12 @@
     flex: 1;
 }
 
+.paragraph-link-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .mainContainer {
