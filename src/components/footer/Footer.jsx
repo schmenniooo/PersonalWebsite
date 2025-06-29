@@ -1,5 +1,5 @@
 
-import { FaInstagram, FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
+import {FaInstagram, FaGithub, FaLinkedin, FaLink} from 'react-icons/fa';
 
 function Footer() {
     const currentYear = new Date().getFullYear().toString();
@@ -24,8 +24,8 @@ function Footer() {
                         </a>
                     </li>
                     <li>
-                        <a href="mailto:ennio.nick@gmail.com" aria-label="Email">
-                            <FaEnvelope className="social-icon" />
+                        <a href="https://de.fiverr.com/s/Q7Qpqz3" target="_blank" aria-label="Fiverr">
+                            <FaLink className="social-icon" />
                         </a>
                     </li>
                 </ul>
