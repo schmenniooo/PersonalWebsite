@@ -40,14 +40,6 @@ function MainContainer() {
                                     <div className="paragraph-content">
                                         <span className="paragraph-icon">{iconBuilder.getParagraphIcon(index)}</span>
                                         <p className="paragraph">{paragraph.text}</p>
-                                        {paragraph.url && (
-                                            <div className="paragraph-link-wrapper">
-                                                <a href={paragraph.url} className="project-link" target="_blank"
-                                                  rel="noopener noreferrer">
-                                                My Fiverr Profile
-                                                </a>
-                                            </div>
-                                        )}
                                     </div>
                                 </div>
                             ))}
