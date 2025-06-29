@@ -35,11 +35,19 @@ function MainContainer() {
                         <h1 className="profile-title">About Me</h1>
                         <div className="profile-divider"></div>
                         <div className="paragraphContainer">
-                            {Object.entries(paragraphs).map(([key, text], index) => (
+                            {Object.entries(paragraphs).map(([key, paragraph], index) => (
                                 <div key={key} className="paragraphItem">
                                     <div className="paragraph-content">
                                         <span className="paragraph-icon">{iconBuilder.getParagraphIcon(index)}</span>
-                                        <p className="paragraph">{text}</p>
+                                        <p className="paragraph">{paragraph.text}</p>
+                                        {paragraph.url && (
+                                            <div className="paragraph-link-wrapper">
+                                                <a href={paragraph.url} className="project-link" target="_blank"
+                                                  rel="noopener noreferrer">
+                                                My Fiverr Profile
+                                                </a>
+                                            </div>
+                                        )}
                                     </div>
                                 </div>
                             ))}

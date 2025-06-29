@@ -86,11 +86,17 @@
 }
 
 .paragraph {
-    color: #333;
+    color: #222;
     line-height: 1.8;
     font-size: 1.1rem;
     margin: 0;
     flex: 1;
+}
+
+.paragraph-link-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
 }
 
 /* Responsive Design */
@@ -163,5 +169,11 @@
         min-width: 1.8rem;
         height: 1.8rem;
         padding: 0.3rem;
+    }
+
+    .paragraph-link {
+        padding: 0.6rem 1rem;
+        font-size: 1rem;
+        word-break: break-word;
     }
 }
