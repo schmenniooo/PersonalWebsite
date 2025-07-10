@@ -47,8 +47,8 @@
 
     width: 100%;
     max-width: 300px;
-    border-radius: 50%;
-    border: 5px solid black;
+    border-radius: 20%;
+    border: 5px solid #1e3c72;
 }
 
 .landing-divider {
