@@ -1,13 +1,13 @@
+
 paragraphContent:
   paragraph1:
     text: "I am a young and passionate developer with a strong drive to continuously learn and grow in the tech industry."
 
   paragraph2:
-    text: "I'm skilled in front-end and back-end technologies including HTML, CSS, JavaScript, React and Java."
+    text: "I'm skilled in front-end, back-end and DevOps technologies including JavaScript, Go, AWS or else."
 
   paragraph3:
     text: "With over two years of hands-on experience in coding, I am committed to delivering clean, efficient, and maintainable code."
 
   paragraph4:
-    text: "I'm offering services on Fiverr to help you with your coding needs. You can find the link below on the right."
-    url: "https://de.fiverr.com/s/Q7Qpqz3"
+    text: "I'm currently doing an apprenticeship at Vector Informatik GmbH as an application developer."
