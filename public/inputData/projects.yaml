@@ -38,5 +38,14 @@ projects:
       edit functionality. Future updates will introduce additional features like a streak tracker 
       and more. The app is built with React.js, tested using Playwright and it can 
       be downloaded and started via Docker."
-    usedTech: "React, Javascript, Playwright-Test-Framework"
+    usedTech: "React, Javascript"
     repo_Link: "https://github.com/schmenniooo/Journal_IO"
+
+  Project4:
+    title: "TrackPilotCRM"
+    description:
+      "This SAAS is a commercial CRM application for self-employed people and small businesses. It combines
+      typical features, like clients management, jobs, finance and invoices. I'm planning a multi user support in the
+      future in version 2.0. . The entire application is hosted on AWS and the development is entirely automated using
+      Github Actions, Terraform and Docker. This is a commercial project and the source code is not publicly available."
+    usedTech: "React, Javascript, AWS, Terraform, Docker"
