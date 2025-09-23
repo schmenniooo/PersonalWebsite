@@ -29,7 +29,7 @@ function ProjectsView() {
 
     return (
 
-        <DefaultRouteContainer title="My ProjectsView">
+        <DefaultRouteContainer title="My Projects">
 
             {loading && <div className="loading-spinner">Loading projects information...</div>}
             {error && <div className="error-message">{error}</div>}

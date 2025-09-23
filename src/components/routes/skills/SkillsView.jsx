@@ -29,7 +29,7 @@ function SkillsView() {
     }, []);
 
     return (
-        <DefaultRouteContainer title="My SkillsView">
+        <DefaultRouteContainer title="My Skills">
 
             {loading && <div className="loading-spinner">Loading skills...</div>}
             {error && <div className="error-message">{error}</div>}

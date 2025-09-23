@@ -49,7 +49,7 @@ projects:
     description:
       "This SAAS is a commercial CRM application for self-employed people and small businesses. It combines
       typical features, like clients management, jobs, finance and invoices. I'm planning a multi user support in the
-      future in version 2.0. . The entire application is hosted on AWS and the development is entirely automated using
+      future in version 2.0. The entire application is hosted on AWS and the development is entirely automated using
       Github Actions, Terraform and Docker. This is a commercial project and the source code is not publicly available."
     usedTech: "React, Javascript, AWS, Terraform, Docker"
     link: "https://track-pilot-info.netlify.app"
