@@ -1,11 +1,11 @@
 
 import yamlReader from "../../../datasource/yaml/yamlReader.js";
 import iconBuilder from "../../../datasource/icons/iconBuilder.js";
-import DefaultRouteContainer from "../model/defaultContainer/defaultRouteContainer.jsx";
-import './skills.css';
+import DefaultRouteContainer from "../model/defaultContainer/DefaultRouteContainer.jsx";
+import './SkillsView.css';
 import { useEffect, useState } from "react";
 
-function Skills() {
+function SkillsView() {
 
     const [skills, setSkills] = useState(null);
     const [loading, setLoading] = useState(true);
@@ -77,4 +77,4 @@ function Skills() {
     );
 }
 
-export default Skills;
+export default SkillsView;

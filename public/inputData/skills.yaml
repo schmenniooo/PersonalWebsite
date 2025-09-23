@@ -13,7 +13,7 @@ skills:
 
     skill3:
       name: Javascript
-      percent: 50
+      percent: 60
 
     skill4:
       name: React
@@ -22,7 +22,11 @@ skills:
   Backend:
 
     skill1:
-      name: Java
+      name: Go
+      percent: 50
+
+    skill2:
+      name: C#
       percent: 70
 
   Tools:
@@ -37,9 +41,17 @@ skills:
 
     skill3:
       name: Docker
-      percent: 40
+      percent: 60
 
     skill4:
+      name: Terraform
+      percent: 60
+
+    skill5:
+      name: AWS
+      percent: 60
+
+    skill6:
       name: Jetbrains IDE's
       percent: 70
 

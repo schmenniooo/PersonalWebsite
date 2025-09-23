@@ -13,7 +13,8 @@ projects:
       logic, and dynamically populated via YAML inputData. Particular focus 
       was placed on clean design, usability, and technical clarity."
     usedTech: "React, Javascript, Css"
-    repo_Link: "https://github.com/schmenniooo/PersonalWebsite"
+    link: "https://github.com/schmenniooo/PersonalWebsite"
+    repo_ButtonText: "View GitHub Repository"
 
   Project2:
     title: "Website for my local barber"
@@ -28,7 +29,8 @@ projects:
       I also offered this project as a real, usable website for the salon, 
       making it my first client-oriented work."
     usedTech: "Html, Css, Javascript"
-    repo_Link: "https://github.com/schmenniooo/LeoHairSalon"
+    link: "https://github.com/schmenniooo/LeoHairSalon"
+    repo_ButtonText: "View GitHub Repository"
 
   Project3:
     title: "Journaling Web App"
@@ -38,5 +40,17 @@ projects:
       edit functionality. Future updates will introduce additional features like a streak tracker 
       and more. The app is built with React.js, tested using Playwright and it can 
       be downloaded and started via Docker."
-    usedTech: "React, Javascript, Playwright-Test-Framework"
-    repo_Link: "https://github.com/schmenniooo/Journal_IO"
+    usedTech: "React, Javascript"
+    link: "https://github.com/schmenniooo/Journal_IO"
+    repo_ButtonText: "View GitHub Repository"
+
+  Project4:
+    title: "TrackPilotCRM"
+    description:
+      "This SAAS is a commercial CRM application for self-employed people and small businesses. It combines
+      typical features, like clients management, jobs, finance and invoices. I'm planning a multi user support in the
+      future in version 2.0. The entire application is hosted on AWS and the development is entirely automated using
+      Github Actions, Terraform and Docker. This is a commercial project and the source code is not publicly available."
+    usedTech: "React, Javascript, AWS, Terraform, Docker"
+    link: "https://track-pilot-info.netlify.app"
+    repo_ButtonText: "View Information Website"

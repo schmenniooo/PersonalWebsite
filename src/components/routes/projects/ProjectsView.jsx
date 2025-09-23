@@ -1,11 +1,11 @@
 
 import yamlReader from '../../../datasource/yaml/yamlReader.js'
 import iconBuilder from "../../../datasource/icons/iconBuilder.js";
-import DefaultRouteContainer from "../model/defaultContainer/defaultRouteContainer.jsx";
+import DefaultRouteContainer from "../model/defaultContainer/DefaultRouteContainer.jsx";
 import { useState, useEffect } from 'react';
-import './projects.css';
+import './ProjectsView.css';
 
-function Projects() {
+function ProjectsView() {
 
     const [projects, setProjects] = useState(null);
     const [loading, setLoading] = useState(true);
@@ -43,13 +43,16 @@ function Projects() {
                                     <h2 className="project-title">{project.title}</h2>
                                     <p className="project-tech">{project.usedTech}</p>
                                     <p className="project-description">{project.description}</p>
-                                    <a
-                                        href={project.repo_Link}
-                                        className="project-link"
-                                        target="_blank"
-                                    >
-                                        View GitHub-Repository
-                                    </a>
+                                    {project.link && (
+                                        <a
+                                            href={project.link}
+                                            className="project-link"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            {project.repo_ButtonText || 'View Repository'}
+                                        </a>
+                                    )}
                                 </div>
                             </div>
                         </div>
@@ -60,4 +63,4 @@ function Projects() {
     );
 }
 
-export default Projects
+export default ProjectsView

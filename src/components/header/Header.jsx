@@ -5,9 +5,9 @@ function Header(){
 
     const navigationItems = [
         ["Me", "/"],
-        ["My career", "/career"],
+        ["My Career", "/career"],
         ["My Skills", "/skills"],
-        ["My projects", "/projects"]
+        ["My Projects", "/projects"]
     ]
 
     return (
