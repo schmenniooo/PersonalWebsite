@@ -3,7 +3,7 @@ import yamlReader from '../../../datasource/yaml/yamlReader.js'
 import iconBuilder from '../../../datasource/icons/iconBuilder.js';
 import { useState, useEffect } from 'react';
 
-function MainContainer() {
+function MainView() {
 
     const [paragraphs, setParagraphs] = useState(null);
     const [loading, setLoading] = useState(true);
@@ -51,4 +51,4 @@ function MainContainer() {
     )
 }
 
-export default MainContainer
+export default MainView

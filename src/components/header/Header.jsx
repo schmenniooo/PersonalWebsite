@@ -6,7 +6,7 @@ function Header(){
     const navigationItems = [
         ["Me", "/"],
         ["My career", "/career"],
-        ["My Skills", "/skills"],
+        ["My SkillsView", "/skills"],
         ["My projects", "/projects"]
     ]
 

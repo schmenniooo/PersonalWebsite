@@ -271,7 +271,7 @@
         min-width: 35px;
     }
 
-    /* Soft Skills Responsive Adjustments */
+    /* Soft SkillsView Responsive Adjustments */
     .softSkillsGrid {
         grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
         gap: 1.2rem;
@@ -372,7 +372,7 @@
         min-width: 30px;
     }
 
-    /* Soft Skills Mobile Adjustments */
+    /* Soft SkillsView Mobile Adjustments */
     .softSkillsGrid {
         grid-template-columns: 1fr;
         gap: 1rem;

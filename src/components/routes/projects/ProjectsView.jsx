@@ -1,11 +1,11 @@
 
 import yamlReader from '../../../datasource/yaml/yamlReader.js'
 import iconBuilder from "../../../datasource/icons/iconBuilder.js";
-import DefaultRouteContainer from "../model/defaultContainer/defaultRouteContainer.jsx";
+import DefaultRouteContainer from "../model/defaultContainer/DefaultRouteContainer.jsx";
 import { useState, useEffect } from 'react';
-import './projects.css';
+import './ProjectsView.css';
 
-function Projects() {
+function ProjectsView() {
 
     const [projects, setProjects] = useState(null);
     const [loading, setLoading] = useState(true);
@@ -29,7 +29,7 @@ function Projects() {
 
     return (
 
-        <DefaultRouteContainer title="My Projects">
+        <DefaultRouteContainer title="My ProjectsView">
 
             {loading && <div className="loading-spinner">Loading projects information...</div>}
             {error && <div className="error-message">{error}</div>}
@@ -63,4 +63,4 @@ function Projects() {
     );
 }
 
-export default Projects
+export default ProjectsView

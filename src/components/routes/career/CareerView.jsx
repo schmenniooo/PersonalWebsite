@@ -1,11 +1,11 @@
 
 import yamlReader from '../../../datasource/yaml/yamlReader.js'
 import iconBuilder from '../../../datasource/icons/iconBuilder.js';
-import DefaultRouteContainer from "../model/defaultContainer/defaultRouteContainer.jsx";
+import DefaultRouteContainer from "../model/defaultContainer/DefaultRouteContainer.jsx";
 import { useState, useEffect } from 'react';
-import './career.css';
+import './CareerView.css';
 
-function CareerContent() {
+function CareerView() {
 
     const [careerStages, setCareerStages] = useState(null);
     const [loading, setLoading] = useState(true);
@@ -53,4 +53,4 @@ function CareerContent() {
     );
 }
 
-export default CareerContent
+export default CareerView

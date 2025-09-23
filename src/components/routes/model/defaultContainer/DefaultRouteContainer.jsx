@@ -1,10 +1,7 @@
 
-import './defaultRouteContainer.css'
+import './DefaultRouteContainer.css'
 
 function DefaultRouteContainer({ title, children }) {
-
-    // TODO: Loading ?
-    // TODO: Errors ?
 
     return (
 
