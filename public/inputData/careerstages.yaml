@@ -26,3 +26,14 @@ content:
       In my free time, I taught myself the fundamentals of web development and discovered a strong interest in 
       software design, user logic, and usability. This phase helped me understand what kind of developer I want 
       to become in future."
+
+  career_stage4:
+    title: "Discovery of DevOps and Go"
+    date: "2025"
+    description:
+      "During 2025, my focus shifted towards infrastructure and automation. I began exploring DevOps practices, 
+      working with AWS services, Docker containerization, and CI/CD pipelines. This led me to discover Go (Golang), 
+      a language that immediately resonated with me due to its simplicity, performance, and strong tooling ecosystem. 
+      I started building projects like TrackPilotCRM (mentioned in the projects page) that combined my growing interest 
+      in backend development with infrastructure automation. This phase marked a turning point
+       – I found the intersection between software development and operational excellence that truly excited me."
