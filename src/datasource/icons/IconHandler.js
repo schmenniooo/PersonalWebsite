@@ -1,5 +1,5 @@
 
-class IconBuilder {
+class IconHandler {
 
     getIcon = (category) => {
 
@@ -51,4 +51,4 @@ class IconBuilder {
 
 }
 
-export default new IconBuilder();
+export default new IconHandler();

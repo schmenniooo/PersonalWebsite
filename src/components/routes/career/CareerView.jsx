@@ -1,6 +1,6 @@
 
-import yamlReader from '../../../datasource/yaml/yamlReader.js'
-import iconBuilder from '../../../datasource/icons/iconBuilder.js';
+import yamlReader from '../../../datasource/yaml/YamlReader.js'
+import iconBuilder from '../../../datasource/icons/IconHandler.js';
 import DefaultRouteContainer from "../model/defaultContainer/DefaultRouteContainer.jsx";
 import { useState, useEffect } from 'react';
 import './CareerView.css';
@@ -24,9 +24,8 @@ function CareerView() {
             }
         };
 
-        fetchData();
+        fetchData().then(r => r.json("Failed to load career information. Please try again later."));
     }, []);
-
 
     return (
         <DefaultRouteContainer title="My Career Journey">

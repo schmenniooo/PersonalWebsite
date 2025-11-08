@@ -1,7 +1,7 @@
 
-import './LandingView.css'
+import './Landing.css'
 
-function LandingView({ onClose }) {
+function Landing({ onClose }) {
 
     function goToMainPage() {
         onClose();
@@ -22,4 +22,4 @@ function LandingView({ onClose }) {
     )
 }
 
-export default LandingView
+export default Landing

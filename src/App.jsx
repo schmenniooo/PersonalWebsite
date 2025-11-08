@@ -1,5 +1,5 @@
 
-import LandingView from './components/landing/LandingView.jsx'
+import Landing from './components/landing/Landing.jsx'
 import Header from './components/header/Header.jsx'
 import MainView from './components/routes/main/MainView.jsx'
 import CareerView from './components/routes/career/CareerView.jsx'
@@ -20,7 +20,7 @@ function App() {
     return (
         <BrowserRouter>
             {showLanding ? (
-                <LandingView onClose={handleLanding} />
+                <Landing onClose={handleLanding} />
             ) : (
                 <div className="app-container">
                     <Header />
