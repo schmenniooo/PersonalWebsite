@@ -5,47 +5,47 @@ skills:
 
     skill1:
       name: HTML
-      percent: 70
+      level: Advanced
 
     skill2:
       name: CSS
-      percent: 70
+      level: Advanced
 
     skill3:
       name: Javascript
-      percent: 60
+      level: Proficient
 
     skill4:
       name: React
-      percent: 60
+      level: Proficient
 
   Backend:
 
     skill1:
       name: Go
-      percent: 60
+      level: Proficient
 
   Tools:
 
     skill1:
       name: Git
-      percent: 70
+      level: Advanced
 
     skill2:
       name: Github
-      percent: 70
+      level: Advanced
 
     skill3:
       name: Docker
-      percent: 60
+      level: Proficient
 
     skill4:
       name: Terraform
-      percent: 60
+      level: Proficient
 
     skill5:
       name: AWS
-      percent: 60
+      level: Proficient
 
   Softskills:
 

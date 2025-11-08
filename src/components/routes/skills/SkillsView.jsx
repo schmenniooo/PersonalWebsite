@@ -54,19 +54,16 @@ function SkillsView() {
                                     ))}
                                 </div>
                             ) : (
-                                Object.entries(skillGroup).map(([key, skill]) => (
-                                    <section key={key} className="skillItem">
-                                        <h3 className="skillHeading">{skill.name}</h3>
-                                        <div className="skill-progress-container">
-                                            <progress
-                                                className="skillProgressBar"
-                                                max="100"
-                                                value={skill.percent}
-                                            ></progress>
-                                            <span className="skill-percent">{skill.percent}%</span>
+                                <div className="technicalSkillsList">
+                                    {Object.entries(skillGroup).map(([key, skill]) => (
+                                        <div key={key} className="technicalSkillItem">
+                                            <span className="technicalSkillName">{skill.name}</span>
+                                            <span className={`technicalSkillLevel ${skill.level.toLowerCase()}`}>
+                                                {skill.level}
+                                            </span>
                                         </div>
-                                    </section>
-                                ))
+                                    ))}
+                                </div>
                             )}
                         </section>
                     ))}

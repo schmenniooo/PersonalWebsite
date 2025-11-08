@@ -57,73 +57,63 @@
     border-radius: 1.5px;
 }
 
-.skillItem {
+.technicalSkillsList {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin: 0;
+    padding: 0;
+}
+
+.technicalSkillItem {
+    display: inline-flex;
     align-items: center;
-    gap: 1.2rem;
-    margin: 0 0 1.2rem 0;
-    padding: 0.8rem;
-    background-color: rgba(255, 255, 255, 0.7);
-    border-radius: 6px;
-    transition: transform 0.2s ease, background-color 0.2s ease;
-}
-
-.skillItem:hover {
-    transform: translateX(3px);
+    gap: 0.6rem;
+    padding: 0.6rem 1rem;
     background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    border: 1px solid rgba(30, 60, 114, 0.15);
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
-.skillItem:last-child {
-    margin-bottom: 0;
+.technicalSkillItem:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
 }
 
-.skillHeading {
+.technicalSkillName {
     color: #1e3c72;
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 500;
     margin: 0;
-    min-width: 100px;
 }
 
-.skill-progress-container {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    gap: 10px;
-}
-
-.skillProgressBar {
-    flex-grow: 1;
-    height: 10px;
-    background-color: rgba(30, 60, 114, 0.1);
-    border-radius: 5px;
-    overflow: hidden;
-    position: relative;
-}
-
-.skill-percent {
-    font-size: 0.9rem;
+.technicalSkillLevel {
+    font-size: 0.75rem;
     font-weight: 600;
+    padding: 0.3rem 0.7rem;
+    border-radius: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.2s ease;
+}
+
+.technicalSkillLevel.advanced {
+    background-color: rgba(30, 60, 114, 0.15);
     color: #1e3c72;
-    min-width: 40px;
-    text-align: right;
+    border: 1px solid rgba(30, 60, 114, 0.3);
 }
 
-.skillProgressBar::-webkit-progress-bar {
-    background-color: rgba(30, 60, 114, 0.1);
-    border-radius: 5px;
+.technicalSkillLevel.proficient {
+    background-color: rgba(42, 82, 152, 0.1);
+    color: #2a5298;
+    border: 1px solid rgba(42, 82, 152, 0.25);
 }
 
-.skillProgressBar::-webkit-progress-value {
-    background: linear-gradient(90deg, #1e3c72, #2a5298);
-    border-radius: 5px;
-    transition: width 0.5s ease;
-}
-
-.skillProgressBar::-moz-progress-bar {
-    background: linear-gradient(90deg, #1e3c72, #2a5298);
-    border-radius: 5px;
+.technicalSkillItem:hover .technicalSkillLevel {
+    transform: scale(1.05);
 }
 
 .softSkillsGrid {
@@ -247,28 +237,22 @@
         padding: 0.4rem;
     }
 
-    .skillItem {
-        padding: 0.6rem;
-        gap: 1rem;
-        margin-bottom: 1rem;
+    .technicalSkillsList {
+        gap: 0.7rem;
     }
 
-    .skillHeading {
-        font-size: 1.1rem;
-        min-width: 80px;
+    .technicalSkillItem {
+        padding: 0.5rem 0.9rem;
+        gap: 0.5rem;
     }
 
-    .skill-progress-container {
-        gap: 8px;
+    .technicalSkillName {
+        font-size: 0.95rem;
     }
 
-    .skillProgressBar {
-        height: 8px;
-    }
-
-    .skill-percent {
-        font-size: 0.85rem;
-        min-width: 35px;
+    .technicalSkillLevel {
+        font-size: 0.7rem;
+        padding: 0.25rem 0.6rem;
     }
 
     /* Soft SkillsView Responsive Adjustments */
@@ -345,31 +329,22 @@
         height: 2px;
     }
 
-    .skillItem {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.5rem;
-        padding: 0.8rem;
+    .technicalSkillsList {
+        gap: 0.6rem;
     }
 
-    .skillHeading {
-        font-size: 1rem;
-        margin-bottom: 0.3rem;
-        min-width: auto;
+    .technicalSkillItem {
+        padding: 0.5rem 0.8rem;
+        gap: 0.4rem;
     }
 
-    .skill-progress-container {
-        gap: 6px;
+    .technicalSkillName {
+        font-size: 0.9rem;
     }
 
-    .skillProgressBar {
-        width: 100%;
-        height: 6px;
-    }
-
-    .skill-percent {
-        font-size: 0.8rem;
-        min-width: 30px;
+    .technicalSkillLevel {
+        font-size: 0.65rem;
+        padding: 0.2rem 0.5rem;
     }
 
     /* Soft SkillsView Mobile Adjustments */
