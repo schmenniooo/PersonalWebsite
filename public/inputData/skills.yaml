@@ -23,11 +23,7 @@ skills:
 
     skill1:
       name: Go
-      percent: 50
-
-    skill2:
-      name: C#
-      percent: 70
+      percent: 60
 
   Tools:
 
@@ -50,10 +46,6 @@ skills:
     skill5:
       name: AWS
       percent: 60
-
-    skill6:
-      name: Jetbrains IDE's
-      percent: 70
 
   Softskills:
 
