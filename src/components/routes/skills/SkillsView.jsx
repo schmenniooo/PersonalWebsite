@@ -1,6 +1,6 @@
 
-import yamlReader from "../../../datasource/yaml/yamlReader.js";
-import iconBuilder from "../../../datasource/icons/iconBuilder.js";
+import yamlReader from "../../../datasource/yaml/YamlReader.js";
+import iconBuilder from "../../../datasource/icons/IconHandler.js";
 import DefaultRouteContainer from "../model/defaultContainer/DefaultRouteContainer.jsx";
 import './SkillsView.css';
 import { useEffect, useState } from "react";
@@ -25,7 +25,7 @@ function SkillsView() {
             }
         };
 
-        fetchData();
+        fetchData().then(r => r.json("Failed to load skills. Please try again later."));
     }, []);
 
     return (
@@ -54,19 +54,16 @@ function SkillsView() {
                                     ))}
                                 </div>
                             ) : (
-                                Object.entries(skillGroup).map(([key, skill]) => (
-                                    <section key={key} className="skillItem">
-                                        <h3 className="skillHeading">{skill.name}</h3>
-                                        <div className="skill-progress-container">
-                                            <progress
-                                                className="skillProgressBar"
-                                                max="100"
-                                                value={skill.percent}
-                                            ></progress>
-                                            <span className="skill-percent">{skill.percent}%</span>
+                                <div className="technicalSkillsList">
+                                    {Object.entries(skillGroup).map(([key, skill]) => (
+                                        <div key={key} className="technicalSkillItem">
+                                            <span className="technicalSkillName">{skill.name}</span>
+                                            <span className={`technicalSkillLevel ${skill.level.toLowerCase()}`}>
+                                                {skill.level}
+                                            </span>
                                         </div>
-                                    </section>
-                                ))
+                                    ))}
+                                </div>
                             )}
                         </section>
                     ))}

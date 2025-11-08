@@ -1,4 +1,4 @@
-name: Trigger Netlify Build on dev → main Merge
+name: Netlify Build Trigger
 
 on:
   push:
