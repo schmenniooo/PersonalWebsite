@@ -2,6 +2,7 @@
 import yamlReader from '../../../datasource/yaml/YamlReader.js'
 import iconBuilder from '../../../datasource/icons/IconHandler.js';
 import { useState, useEffect } from 'react';
+import DefaultRouteContainer from "../model/defaultContainer/DefaultRouteContainer.jsx";
 
 function MainView() {
 
@@ -26,31 +27,23 @@ function MainView() {
     }, []);
 
     return (
-        <div className="mainContainer">
-            <main className="mainContent">
-                {loading && <div className="loading-spinner">Loading content...</div>}
-                {error && <div className="error-message">{error}</div>}
-                {paragraphs && (
-                    <>
-                        <div className="glass-header">
-                            <h1 className="profile-title">About Me</h1>
-                            <p className="profile-subtitle">Developer • Sportsman • Problem Solver</p>
+        <DefaultRouteContainer title="About Me">
+            {loading && <div className="loading-spinner">Loading content...</div>}
+            {error && <div className="error-message">{error}</div>}
+            {paragraphs && (
+                <div className="glass-container">
+                    {Object.entries(paragraphs).map(([key, paragraph], index) => (
+                        <div key={key} className="glass-card" style={{"--delay": `${index * 0.1}s`}}>
+                            <div className="card-shine"></div>
+                            <div className="paragraph-content">
+                                <span className="paragraph-icon">{iconBuilder.getParagraphIcon(index)}</span>
+                                <p className="paragraph">{paragraph.text}</p>
+                            </div>
                         </div>
-                        <div className="glass-container">
-                            {Object.entries(paragraphs).map(([key, paragraph], index) => (
-                                <div key={key} className="glass-card" style={{"--delay": `${index * 0.1}s`}}>
-                                    <div className="card-shine"></div>
-                                    <div className="paragraph-content">
-                                        <span className="paragraph-icon">{iconBuilder.getParagraphIcon(index)}</span>
-                                        <p className="paragraph">{paragraph.text}</p>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                    </>
-                )}
-            </main>
-        </div>
+                    ))}
+                </div>
+            )}
+        </DefaultRouteContainer>
     )
 }
 
