@@ -5,46 +5,134 @@
     align-items: center;
     padding: 20px;
     width: 100%;
-    height: 100px;
+    min-height: 100px;
     margin-top: 50px;
     position: relative;
     z-index: 10;
+    gap: 2rem;
 }
 
-.headerContainer h1 {
+.glass-title-container {
+    position: relative;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    padding: 1rem 2.5rem;
+    box-shadow:
+        0 8px 32px 0 rgba(0, 0, 0, 0.25),
+        inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    animation: fadeInScale 0.8s ease-out;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.glass-title-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.15),
+        transparent
+    );
+    transition: left 0.6s;
+}
+
+.glass-title-container:hover::before {
+    left: 100%;
+}
+
+.glass-title-container:hover {
+    transform: translateY(-3px) scale(1.03);
+    box-shadow:
+        0 12px 40px 0 rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 0 rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.25);
+}
+
+.glass-title {
     color: white;
     font-size: 2.2rem;
     font-weight: 700;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
     letter-spacing: 1px;
     margin: 0;
-    transition: transform 0.3s ease;
-}
-
-.headerContainer h1:hover {
-    transform: scale(1.05);
+    position: relative;
+    z-index: 1;
 }
 
 .headingLink {
     text-decoration: none;
-    color: white;
-    transition: color 0.3s ease;
-}
-
-.navContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(30, 60, 114, 0.2);
-    border-radius: 10px;
-    padding: 10px 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    color: rgba(255, 255, 255, 0.98);
     transition: all 0.3s ease;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(138, 43, 226, 0.8));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
-.navContainer:hover {
-    background-color: rgba(30, 60, 114, 0.3);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+.glass-title-container:hover .headingLink {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 1), rgba(138, 43, 226, 1));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: drop-shadow(0 0 10px rgba(138, 43, 226, 0.4));
+}
+
+.glass-nav-container {
+    position: relative;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 16px;
+    padding: 0.8rem 1.8rem;
+    box-shadow:
+        0 8px 32px 0 rgba(0, 0, 0, 0.25),
+        inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    overflow: hidden;
+    animation: fadeInScale 0.8s ease-out 0.2s both;
+}
+
+.glass-nav-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.05) 0%,
+        rgba(255, 255, 255, 0) 50%,
+        rgba(255, 255, 255, 0.03) 100%
+    );
+    pointer-events: none;
+}
+
+.glass-nav-container:hover {
+    box-shadow:
+        0 10px 36px 0 rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 0 rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.2);
 }
 
 .navigationItemContainer {
@@ -53,59 +141,82 @@
     align-items: center;
     margin: 0;
     padding: 0;
-    gap: 50px;
+    gap: 2.5rem;
     list-style-type: none;
+    position: relative;
+    z-index: 1;
 }
 
 .navigationItem {
     position: relative;
     padding: 5px 0;
-    transition: transform 0.2s ease;
+    transition: transform 0.3s ease;
 }
 
 .navigationItem:hover {
-    transform: translateY(-2px);
+    transform: translateY(-3px);
 }
 
-.navigationItem:after {
+.navigationItem::after {
     content: "";
     display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 50%;
+    transform: translateX(-50%);
     width: 0;
-    height: 3px;
-    background: #61dafb;
+    height: 2px;
+    background: linear-gradient(90deg, rgba(138, 43, 226, 0.8), rgba(30, 144, 255, 0.8));
     transition: width 0.3s ease;
-    margin: 0 auto;
+    border-radius: 2px;
+    box-shadow: 0 0 8px rgba(138, 43, 226, 0.5);
 }
 
-.navigationItem:hover:after {
+.navigationItem:hover::after {
     width: 100%;
 }
 
 .linkItem {
-    color: white;
+    color: rgba(255, 255, 255, 0.95);
     text-decoration: none;
     font-weight: 500;
     font-size: 1.1rem;
     letter-spacing: 0.5px;
     padding: 5px 10px;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .linkItem:hover {
-    color: #61dafb;
+    color: rgba(138, 43, 226, 0.95);
+    text-shadow: 0 0 8px rgba(138, 43, 226, 0.4);
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
     .headerContainer {
         flex-direction: column;
-        height: auto;
-        gap: 20px;
+        min-height: auto;
+        gap: 1.5rem;
         margin-top: 30px;
     }
 
+    .glass-title-container {
+        padding: 0.9rem 2rem;
+        border-radius: 18px;
+    }
+
+    .glass-title {
+        font-size: 1.9rem;
+    }
+
+    .glass-nav-container {
+        padding: 0.7rem 1.5rem;
+        border-radius: 14px;
+    }
+
     .navigationItemContainer {
-        gap: 30px;
+        gap: 2rem;
     }
 
     .linkItem {
@@ -116,18 +227,48 @@
 @media (max-width: 480px) {
     .headerContainer {
         margin-top: 20px;
+        padding: 15px;
+        gap: 1.2rem;
     }
 
-    .headerContainer h1 {
-        font-size: 1.7rem;
+    .glass-title-container {
+        padding: 0.7rem 1.5rem;
+        border-radius: 16px;
+    }
+
+    .glass-title {
+        font-size: 1.5rem;
+        letter-spacing: 0.5px;
+    }
+
+    .glass-nav-container {
+        padding: 0.6rem 1.2rem;
+        border-radius: 12px;
     }
 
     .navigationItemContainer {
-        gap: 15px;
+        gap: 1rem;
     }
 
     .linkItem {
         font-size: 0.9rem;
         padding: 5px;
+    }
+}
+
+/* Safari-specific fixes for backdrop-filter */
+@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+    .glass-title-container,
+    .glass-nav-container {
+        -webkit-backdrop-filter: blur(20px);
+        backdrop-filter: blur(20px);
+    }
+}
+
+/* Fallback for browsers that don't support backdrop-filter */
+@supports not ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+    .glass-title-container,
+    .glass-nav-container {
+        background: rgba(30, 60, 114, 0.85);
     }
 }

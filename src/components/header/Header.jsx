@@ -12,8 +12,12 @@ function Header(){
 
     return (
         <div className="headerContainer">
-            <h1><Link className="headingLink" to="/">Ennio Schmidt</Link></h1>
-            <nav className="navContainer">
+            <div className="glass-title-container">
+                <h1 className="glass-title">
+                    <Link className="headingLink" to="/">Ennio Schmidt</Link>
+                </h1>
+            </div>
+            <nav className="glass-nav-container">
                 <ul className="navigationItemContainer">
                     {navigationItems.map(([text, link]) => (
                         <li className="navigationItem" key={text}>
