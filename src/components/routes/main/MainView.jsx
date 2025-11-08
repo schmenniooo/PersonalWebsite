@@ -27,11 +27,6 @@ function MainView() {
 
     return (
         <div className="mainContainer">
-            <div className="background-decoration">
-                <div className="floating-shape shape-1"></div>
-                <div className="floating-shape shape-2"></div>
-                <div className="floating-shape shape-3"></div>
-            </div>
             <main className="mainContent">
                 {loading && <div className="loading-spinner">Loading content...</div>}
                 {error && <div className="error-message">{error}</div>}
