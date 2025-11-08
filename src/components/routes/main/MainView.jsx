@@ -27,16 +27,24 @@ function MainView() {
 
     return (
         <div className="mainContainer">
+            <div className="background-decoration">
+                <div className="floating-shape shape-1"></div>
+                <div className="floating-shape shape-2"></div>
+                <div className="floating-shape shape-3"></div>
+            </div>
             <main className="mainContent">
                 {loading && <div className="loading-spinner">Loading content...</div>}
                 {error && <div className="error-message">{error}</div>}
                 {paragraphs && (
-                    <div className="profile-card">
-                        <h1 className="profile-title">About Me</h1>
-                        <div className="profile-divider"></div>
-                        <div className="paragraphContainer">
+                    <>
+                        <div className="glass-header">
+                            <h1 className="profile-title">About Me</h1>
+                            <p className="profile-subtitle">Developer • Sportsman • Problem Solver</p>
+                        </div>
+                        <div className="glass-container">
                             {Object.entries(paragraphs).map(([key, paragraph], index) => (
-                                <div key={key} className="paragraphItem">
+                                <div key={key} className="glass-card" style={{"--delay": `${index * 0.1}s`}}>
+                                    <div className="card-shine"></div>
                                     <div className="paragraph-content">
                                         <span className="paragraph-icon">{iconBuilder.getParagraphIcon(index)}</span>
                                         <p className="paragraph">{paragraph.text}</p>
@@ -44,7 +52,7 @@ function MainView() {
                                 </div>
                             ))}
                         </div>
-                    </div>
+                    </>
                 )}
             </main>
         </div>
